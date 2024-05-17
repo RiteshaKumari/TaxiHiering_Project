@@ -1,0 +1,226 @@
+﻿
+
+
+.theme-red .download-btn:hover{
+    background-color:lightblue !important;
+}
+
+
+
+/*.animated-button1 {
+    position: relative;
+    background: linear-gradient(-30deg, #dd1515e8 50%, #dd8c8c 50%);
+    padding: 15px 19px;
+    margin: 12px;
+    display: inline-block;
+    transform: translate(0%, 0%);
+    overflow: hidden;
+    color: #f7d4d4;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+    .animated-button1::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: #ad8585;
+        opacity: 0;
+      
+        transition: .2s opacity ease-in-out;
+    }
+
+    .animated-button1:hover {*/
+        /* opacity: 0.2;*/
+        /*color: white !important;
+        background: linear-gradient(360deg, #dd1515e8 50%, #dd8c8c 50%);
+    }
+
+    .animated-button1 span {
+        position: absolute;
+    }
+
+        .animated-button1 span:nth-child(1) {
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+       
+            background: linear-gradient(to left, rgba(43, 8, 8, 0), #d92626);
+          
+            animation: 2s animateTop linear infinite;
+        }
+
+@keyframes animateTop {
+    0% {
+     
+        transform: translateX(100%);
+    }
+
+    100% {
+   
+        transform: translateX(-100%);
+    }
+}
+
+.animated-button1 span:nth-child(2) {
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 2px;
+
+    background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
+  
+    animation: 2s animateRight linear -1s infinite;
+}
+
+@keyframes animateRight {
+    0% {
+       
+        transform: translateY(100%);
+    }
+
+    100% {
+       
+        transform: translateY(-100%);
+    }
+}
+
+.animated-button1 span:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#d92626));
+    background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
+  
+    animation: 2s animateBottom linear infinite;
+}
+
+@keyframes animateBottom {
+    0% {
+      
+        transform: translateX(-100%);
+    }
+
+    100% {
+    
+        transform: translateX(100%);
+    }
+}
+
+.animated-button1 span:nth-child(4) {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 2px;
+  
+    background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #d92626);
+   
+    animation: 2s animateLeft linear -1s infinite;
+}
+
+@keyframes animateLeft {
+    0% {
+      
+        transform: translateY(-100%);
+    }
+
+    100% {
+       
+        transform: translateY(100%);
+    }
+}*/
+
+
+
+
+.my {
+    color: white !important;
+    background: linear-gradient(120deg, #eb7575 50%, #e94d4d 50%);
+    border: 1px solid red;
+}
+
+
+
+.flip_image:hover {
+    transform: scaleX(-1);
+}
+
+.menu-top {
+    padding: 20px !important;
+   
+}
+
+
+
+.main-menu ul li.menu-item-has-children > a:after {
+    content: "" !important;
+
+}
+
+.footer-layout3 .copyright-wrap {
+    background-color: #cc0e0e !important;
+}
+
+.footer-layout3 .copyright-text a:hover {
+    color: #080808 !important;
+}
+
+.about{
+    display:flex !important;
+    justify-content:center;
+}
+
+.process-card_icon .shape {
+    background-color: #040202 !important;
+   
+}
+
+.team-grid:hover {
+    box-shadow: 7px 20px 20px 5px rgb(44 46 50 / 12%);
+}
+
+
+/*.animate:hover {
+   overflow:hidden;
+    transform: scale(1.1);
+}*/
+
+.myclass{
+    padding-bottom:0px !important;
+}
+
+.carpadding{
+    padding-top:15px !important;
+}
+
+.girlimage {
+    transform: scaleX(-1);
+}
+
+.feature-grid:hover {
+    box-shadow: 0 6px 12px -4px rgb(11 18 25 / 42%);
+}
+
+
+.as-header .info-card_icon i:hover {
+    background-color: #ed3f3f !important;
+}
+
+.service-img {
+    overflow: hidden !important;
+}
+
+    .service-img img {
+        transition: transform .5s ease !important;
+    }
+
+   

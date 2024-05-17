@@ -1,0 +1,406 @@
+﻿@using Taxi_Project.Models
+@model tbl_Contact
+
+
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+
+<style>
+
+
+        .contact .contact-box i {
+            color: #db2d2e;
+            font-size: 30px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .contact .contact-box,
+        .contact .contact-box p,
+        .contact .contact-box i,
+        .contact .contact-box h5 {
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+        }
+
+            .contact .contact-box:hover {
+                background: #db2d2e;
+            }
+
+                .contact .contact-box:hover i,
+                .contact .contact-box:hover p,
+                .contact .contact-box:hover h5 {
+                    color: #ffffff;
+                }
+
+        .contact-map {
+            height: 400px;
+        }
+
+            .contact-map .container-fluid {
+                padding: 0px;
+            }
+
+                .contact-map .container-fluid iframe {
+                    border: 0px;
+                    width: 100%;
+                    height: 400px;
+                }
+
+        .contact-2 .feature-box-3 {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .contact-2 .opening-hours {
+            margin-top: 50px;
+            display: block;
+        }
+
+        .contact-2 .gray-form {
+            padding-right: 50px;
+        }
+
+            .contact-2 .gray-form p {
+                margin-bottom: 30px;
+            }
+
+            .contact-2 .gray-form a.button.red {
+                display: block;
+            }
+
+        form.gray-form .form-notice p {
+            margin-bottom: 10px;
+        }
+
+        .contact-2 .gray-form .form-notice p {
+            margin-bottom: 10px;
+        }
+
+        .contact .contact-box {
+            padding: 30px 10px;
+            background: #f6f6f6;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            border: 1px solid #db2d2e;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+            .contact-form input[type="text"]:focus,
+            .contact-form input[type="email"]:focus,
+            .contact-form textarea:focus {
+                outline: none;
+                box-shadow: none;
+                border-color: #db2d2e;
+            }
+
+        .contact-form button[type="submit"] {
+            background-color: #db2d2e;
+            color: #ffffff;
+            border: none;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+            .contact-form button[type="submit"]:hover {
+                background-color: #c62526;
+            }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .section-title {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+            .section-title h2 {
+                font-size: 36px;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: normal;
+            color: #363636;
+            margin-top: 0px;
+            text-transform: uppercase;
+        }
+
+        .white-bg {
+            background: #ffffff;
+        }
+
+        .page-section-ptb {
+            padding: 80px 0;
+        }
+
+        .contact-box_icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f6f6f6;
+            border-radius: 50%;
+        }
+
+            .contact-box_icon i {
+                font-size: 24px;
+                color: #c62526;
+            }
+
+        .opening-hours {
+            padding: 25px;
+        }
+
+        .gray-bg {
+            background: #f6f6f6;
+        }
+
+        .text-red {
+            color: #db2d2e;
+        }
+
+        .list-style-none li {
+            list-style: none;
+        }
+
+        ul.list-style-none {
+            padding: 0;
+            margin: 0;
+        }
+
+            ul.list-style-none li {
+                margin-bottom: 10px;
+            }
+
+                ul.list-style-none li strong {
+                    display: inline-block;
+                    width: 120px;
+                }
+
+                ul.list-style-none li span {
+                    width: 200px;
+                }
+
+                    ul.list-style-none li span.text-red {
+                        color: red;
+                    }
+
+        .feature-box-3 .icon {
+            width: 70px;
+            height: 70px;
+            float: left;
+            margin-right: 20px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .feature-box-3 .content {
+            display: table-cell;
+            margin-top: 10px;
+            vertical-align: top;
+        }
+
+
+
+
+        .special-section.grid-box .special-box {
+            border-radius: 18px !important;
+        }
+
+        .special-section .special-box .special-img {
+            border-radius: 10px !important;
+        }
+
+        .pactext {
+            display: flex !important;
+            justify-content: space-between !important;
+        }
+
+        .breadcrumb-section {
+            height: 155px !important;
+        }
+
+            .breadcrumb-section .breadcrumb-content {
+                height: 154px !important;
+                background-color: black !important;
+                opacity: 0.5;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+        .hov:hover {
+            color: red;
+        }
+
+        .breadcrumb-section .breadcrumb-content.overlay-black > div {
+            background-color: transparent;
+        }
+    </style>
+
+
+
+
+<section class="breadcrumb-section parallax-img pt-0 bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car1.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+    <img src="/Content/assets/Custom/Tour/car1.jpg" class="bg-img img-fluid blur-up lazyloaded" alt="" style="display: none;">
+    <div class="breadcrumb-content overlay-black">
+        <h1 class="breadcumb-title" style="font-size:40px;">Contact Us</h1>
+        <ul class="breadcumb-menu">
+            <li><a href="Index">Home</a></li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+
+<br />
+<br />
+<section class="contact page-section-ptb white-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <span>We’d Love to Hear From You</span>
+                    <h2>LET'S GET IN TOUCH!</h2>
+                    <div class="separator">@TempData["message"]</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="contact-box text-center grey-border" style="margin: 10px; padding: 15px;">
+                    <i class="fa fa-map-marker"></i>
+                    <h5>Address</h5>
+                    <p>220E Front St. Burlington </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="contact-box text-center grey-border" style="margin: 10px; padding: 15px;">
+                    <i class="fa fa-phone"></i>
+                    <h5>Phone</h5>
+                    <p>(007) 123 456 7890</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-2 mb-sm-0">
+                <div class="contact-box text-center grey-border mb-4 mb-sm-0" style="margin: 10px; padding: 15px;">
+                    <i class="fa fa-envelope"></i>
+                    <h5>Email</h5>
+                    <p>support@website.com</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="contact-box text-center mb-0 grey-border" style="margin: 10px; padding: 15px;">
+                    <i class="fa fa-fax"></i>
+                    <h5>Fax</h5>
+                    <p>(007) 123 456 7890</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section-ptb" style="padding-bottom: 0px;">
+
+            <div class="row">
+                <div class="col-lg-8 col-sm-12">
+                    <div class="gray-form">
+                        <div id="formmessage" class="form-notice" style="display:none;">Success/Error Message Goes Here</div>
+                        
+                        @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+                        {
+                            <div class="contact-form row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="mb-3 ritcon">
+
+                                        @Html.TextBoxFor(model => model.ContName, null, new { @class = "form-control placeholder", @PlaceHolder = "Enter your Name*", @id = "contactform_name", @name = "name" })
+                                        @Html.ValidationMessageFor(model => model.ContName, null, new { @class = "text-danger" })
+
+                                       
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="mb-3">
+
+                                        @Html.TextBoxFor(model => model.ContEmail, null, new { @class = "form-control placeholder", @PlaceHolder = "Email*", @id = "contactform_email", @name = "email" })
+                                        @Html.ValidationMessageFor(model => model.ContEmail, null, new { @class = "text-danger" })
+
+                                   
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-sm-12">
+                                    <div class="mb-3">
+
+                                        @Html.TextBoxFor(model => model.ContMobNo, null, new { @class = "form-control placeholder", @PlaceHolder = "Phone*", @id = "contactform_phone", @name = "phone" })
+                                        @Html.ValidationMessageFor(model => model.ContMobNo, null, new { @class = "text-danger" })
+
+                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        @Html.TextAreaFor(model => model.ContMessage, new { @class = "form-control input-message placeholder", @PlaceHolder = "Comment*", cols = "30", rows = "7", @id = "contactform_message", @name = "message" })
+                                        @Html.ValidationMessageFor(model => model.ContMessage, null, new { @class = "text-danger" })
+
+                                        
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="hidden" name="action" value="sendEmail">
+                                    <button style="font-size: 11px;" id="submit" name="submit" type="submit" value="Send" class="as-btn" >Send your message <i class="fa fa-spinner fa-spin fa-fw btn-loader" style="display: none;"></i></button>
+                                  
+                                </div>
+
+                            </div>
+                         
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 mt-lg-0 mt-4">
+                    <section class="contact-map">
+                        <div class="container-fluid">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.017231421863!2d-79.43780268425046!3d36.09306798010035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88532bae09664ccb%3A0xaa6b8f98d3fb8135!2s220+E+Front+St%2C+Burlington%2C+NC+27215%2C+USA!5e0!3m2!1sen!2sin!4v1475045272926" allowfullscreen=""></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<br />
+<br />
+<script>
+ $(document).ready(function () {
+     if (@TempData["check"] == "True")
+     { 
+            alert("Request Send Successfully!");
+        }
+    });
+</script>

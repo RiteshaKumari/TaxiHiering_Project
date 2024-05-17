@@ -1,0 +1,238 @@
+﻿
+@{
+    ViewBag.Title = "TourDetails";
+}
+
+
+
+
+<style>
+    .header-layout1 .container {
+        margin-right: auto !important;
+    }
+
+    .logos {
+        width: 160px !important;
+    }
+
+    .header-top {
+        padding: 8px 0 10px !important;
+        position: relative !important;
+        background: #000 !important;
+        border-bottom: 5px solid var(--theme-color) !important;
+        z-index: 1;
+    }
+
+        .header-top li {
+            color: #fff !important;
+            padding: 0 !important;
+        }
+
+            .header-top li a {
+                color: #fff !important;
+            }
+
+            .header-top li i {
+                color: #fff !important;
+            }
+
+    .social-title {
+        color: #fff !important;
+    }
+
+    .header-top::before {
+        content: "";
+        position: absolute !important;
+        background: var(--theme-color) !important;
+        border-radius: 0 50px 0 0;
+        border-right: 15px solid #fff !important;
+        width: 10%;
+        top: 0;
+        left: 0;
+        bottom: -1px;
+        z-index: -1;
+    }
+
+    .header-top::after {
+        content: "";
+        position: absolute;
+        background: var(--theme-color) !important;
+        border-radius: 50px 0 0 0;
+        border-left: 15px solid #fff !important;
+        width: 10%;
+        top: 0;
+        right: 0;
+        bottom: -1px;
+        z-index: -1;
+    }
+
+    @@media(max-width:991px) {
+        .header-links {
+            display: none;
+        }
+
+        .headsocial {
+            display: block;
+        }
+
+        .vs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @@media(max-width:1300px) {
+        .topheaderli li {
+            font-size: 12px !important;
+        }
+    }
+
+    @@media(max-width:1199px) {
+        .topheaderli li {
+            font-size: 14px !important;
+        }
+    }
+
+    .header-layout1 {
+        width: 100%;
+    }
+</style>
+
+
+
+<div class="as-menu-wrapper">
+    <div class="as-menu-area text-center">
+        <button class="as-menu-toggle">
+            <i class="fal fa-times"></i>
+        </button>
+        <div class="mobile-logo">
+            <a href="/">
+                <img src="/Content/assets/CustomImages/img/TaxihireinJaipur(fabicon)-03.png" alt="logo" class="logos" />
+            </a>
+        </div>
+        <div class="as-mobile-menu">
+
+            <ul class="sub-menu as-submenu">
+                <li>
+                    <a href="/">Home</a>
+
+                </li>
+                <li>
+                    <a href="/About">About Us</a>
+                </li>
+                <li>
+                    <a href="/Aboutjaipur">About Jaipur</a>
+                </li>
+                <li>
+                    <a href="/Service">Service</a>
+
+                </li>
+                @*<li class="menu-item-has-children as-item-has-children">
+                    <a href="/vechicles">Vechicle<span class="as-mean-expand"></span></a>
+                    <ul class="sub-menu as-submenu" style="display: none;">*@
+                <li>
+                    <a href="/vechicles">vechicle</a>
+                </li>
+
+
+                @*<li>
+                                <a href="/Booking_ride">Booking Ride</a>
+                            </li>
+                            <li>
+                                <a href="/Faq">Faq</a>
+                            </li>
+                        </ul>
+                    </li>*@
+                <li>
+                    <a href="/Destination">Destination</a>
+
+                </li>
+                <li>
+                    <a href="/TourPackage">Tour Package</a>
+
+                </li>
+
+                <li>
+                    <a href="/Gallery">Gallery</a>
+
+                </li>
+                <li>
+                    <a href="/Contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<header class="header header-layout1" style=" padding: 0px 26px;">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+                <div class="header-logo">
+                    <a href="/">
+                        <img src="/Content/assets/CustomImages/img/TaxihireinJaipur(fabicon)-03.png" alt="logo" class="logos" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <nav class="main-menu d-none d-lg-inline-block Css-sk-Clr-black">
+                            <ul>
+                                <li> <a href="/">Home</a> </li>
+                                <li><a href="/About">About Us</a> </li>
+                                <li> <a href="/Aboutjaipur">About Jaipur</a></li>
+                                <li> <a href="/Service">Service</a> </li>
+                                @*<li class="menu-item-has-children">
+                                    <a href="/Vechicles">Vechicle</a>
+                                    <ul class="sub-menu">*@
+                                <li><a href="/Vechicles">Vechicle</a> </li>
+                                @*<li> <a href="/Booking_ride">Booking Ride</a>  </li>
+                                            <li><a href="/Faq">Faq</a></li>
+                                        </ul>
+                                    </li>*@
+                                <li> <a href="/Destination">Destination</a> </li>
+                                <li> <a href="/TourPackage">Tour Package</a></li>
+                                <li> <a href="/Gallery">Gallery</a></li>
+                                <li> <a href="/Contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <button type="button" class="as-menu-toggle d-inline-block d-lg-none">
+                            <i class="far fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="col-auto d-none d-xxl-block" style="display:none !important;">
+                        <div class="header-button">
+                            <button type="button" class="icon-style2 searchBoxToggler">
+                                <i class="far fa-search"></i>
+                            </button>
+                            <a href="/booking_ride" class="as-btn style3 style-skew">
+                                <span class="btn-text">BOOK A TAXI</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

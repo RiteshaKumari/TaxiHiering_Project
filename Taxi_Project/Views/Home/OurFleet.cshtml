@@ -1,0 +1,417 @@
+﻿<link href="~/Content/assets/css/Tour.css" rel="stylesheet" />
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+
+
+
+
+    .filter-panel .left-filter .filters ul li {
+        padding: 7px 17px;
+        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+        cursor: pointer;
+        background-color: #f9f9f9;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        font-weight: 700;
+        margin-right: 10px;
+        text-transform: capitalize;
+    }
+
+        .filter-panel .left-filter .filters ul li.active {
+            background-color: #ef3f3e;
+            color: white;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+</style>
+
+<section class="breadcrumb-section parallax-img pt-0 bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car1.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+    <img src="/Content/assets/Custom/Tour/car1.jpg" class="bg-img img-fluid blur-up lazyloaded" alt="" style="display: none;">
+    <div class="breadcrumb-content overlay-black">
+        <h1 class="breadcumb-title" style="font-size:40px;">Our Fleet</h1>
+        <ul class="breadcumb-menu">
+            <li><a href="Index">Home</a></li>
+            <li>Our Fleet</li>
+        </ul>
+    </div>
+</section>
+
+
+<br />
+<br />
+
+
+
+
+
+<section class="xs-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="filter-panel shadow-cls">
+                    <div class="left-filter">
+                  
+                        <div class="filters respon-filter-content filter-button-group">
+                            <ul>
+                                <li class="active" data-filter="*">All</li>
+                                <li data-filter=".popular" class="">SUV/MUC</li>
+                                <li data-filter=".latest">Economy Class</li>
+                                <li data-filter=".trend" class="">Premium</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-12 ratio3_2">
+                <div class="product-wrapper-grid special-section grid-box">
+                    <div class="row content grid" style="position: relative; height: 915.27px;">
+                        <div class="col-xl-3 col-lg-4 col-sm-6  popular grid-item wow fadeInUp" data-class="popular" style="position: absolute; left: 0px; top: 0px; visibility: visible; animation-name: fadeInUp;">
+                            <div class="special-box cab-box">
+                                <div class="special-img">
+                                    <a href="#" class="bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car2.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                                        <img src="/Content/assets/Custom/Tour/car2.jpg" class="img-fluid blur-up lazyload bg-img" alt="" style="display: none;">
+                                    </a>
+                                  
+                                </div>
+                                <div class="filter-card-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta" style="font-size: small;">$174,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5 style="font-size: small;">Camz Ferrari Portofino M</h5>
+                                    </a>
+                                    <span class="meta-content" style="font-size: small;"><strong>Listed by:</strong> <a href="#">Car House</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="card-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gauge"></i></span>
+                                            120cc
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-steering-wheel"></i></span>
+                                            Manual
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gas-pump"></i></span>
+                                            Petrol
+                                        </div>
+                                    </div>
+                                    <a href="inventory-details.html" class="btn as-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6  latest grid-item wow fadeInUp" data-class="latest" style="position: absolute; left: 286.5px; top: 0px; visibility: visible; animation-name: fadeInUp;">
+                            <div class="special-box cab-box">
+                                <div class="special-img">
+                                    <a href="#" class="bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car3.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                                        <img src="/Content/assets/Custom/Tour/car3.jpg" class="img-fluid blur-up lazyload bg-img" alt="" style="display: none;">
+                                    </a>
+                                  
+                                </div>
+                                <div class="filter-card-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta" style="font-size: small;">$174,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5 style="font-size: small;">Camz Ferrari Portofino M</h5>
+                                    </a>
+                                    <span class="meta-content" style="font-size: small;"><strong>Listed by:</strong> <a href="#">Car House</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="card-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gauge"></i></span>
+                                            120cc
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-steering-wheel"></i></span>
+                                            Manual
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gas-pump"></i></span>
+                                            Petrol
+                                        </div>
+                                    </div>
+                                    <a href="inventory-details.html" class="btn as-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6  popular grid-item wow fadeInUp" data-class="popular" style="position: absolute; left: 573px; top: 0px; visibility: visible; animation-name: fadeInUp;">
+                            <div class="special-box cab-box">
+                                <div class="special-img">
+                                    <a href="#" class="bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car4.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                                        <img src="/Content/assets/Custom/Tour/car4.jpg" class="img-fluid blur-up lazyload bg-img" alt="" style="display: none;">
+                                    </a>
+                                   
+                                </div>
+                                <div class="filter-card-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta" style="font-size: small;">$174,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5 style="font-size: small;">Camz Ferrari Portofino M</h5>
+                                    </a>
+                                    <span class="meta-content" style="font-size: small;"><strong>Listed by:</strong> <a href="#">Car House</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="card-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gauge"></i></span>
+                                            120cc
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-steering-wheel"></i></span>
+                                            Manual
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gas-pump"></i></span>
+                                            Petrol
+                                        </div>
+                                    </div>
+                                    <a href="inventory-details.html" class="btn as-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6  trend grid-item wow fadeInUp" data-class="trend" style="position: absolute; left: 859.5px; top: 0px; visibility: visible; animation-name: fadeInUp;">
+                            <div class="special-box cab-box">
+                                <div class="special-img">
+                                    <a href="#" class="bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car5.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                                        <img src="/Content/assets/Custom/Tour/car5.jpg" class="img-fluid blur-up lazyload bg-img" alt="" style="display: none;">
+                                    </a>
+                                   
+                                </div>
+                                <div class="filter-card-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta" style="font-size: small;">$174,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5 style="font-size: small;">Camz Ferrari Portofino M</h5>
+                                    </a>
+                                    <span class="meta-content" style="font-size: small;"><strong>Listed by:</strong> <a href="#">Car House</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="card-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gauge"></i></span>
+                                            120cc
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-steering-wheel"></i></span>
+                                            Manual
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gas-pump"></i></span>
+                                            Petrol
+                                        </div>
+                                    </div>
+                                    <a href="inventory-details.html" class="btn as-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6  popular grid-item wow fadeInUp" data-class="popular" style="position: absolute; left: 0px; top: 457.635px; visibility: visible; animation-name: fadeInUp;">
+                            <div class="special-box cab-box">
+                                <div class="special-img">
+                                    <a href="#" class="bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car6.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                                        <img src="/Content/assets/Custom/Tour/car6.jpg" class="img-fluid blur-up lazyload bg-img" alt="" style="display: none;">
+                                    </a>
+                                  
+                                </div>
+                                <div class="filter-card-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta" style="font-size: small;">$174,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5 style="font-size: small;">Camz Ferrari Portofino M</h5>
+                                    </a>
+                                    <span class="meta-content" style="font-size: small;"><strong>Listed by:</strong> <a href="#">Car House</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="card-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gauge"></i></span>
+                                            120cc
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-steering-wheel"></i></span>
+                                            Manual
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gas-pump"></i></span>
+                                            Petrol
+                                        </div>
+                                    </div>
+                                    <a href="inventory-details.html" class="btn as-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6  latest grid-item wow fadeInUp" data-class="latest" style="position: absolute; left: 286.5px; top: 457.635px; visibility: visible; animation-name: fadeInUp;">
+                            <div class="special-box cab-box">
+                                <div class="special-img">
+                                    <a href="#" class="bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car7.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                                        <img src="/Content/assets/Custom/Tour/car7.jpg" class="img-fluid blur-up lazyload bg-img" alt="" style="display: none;">
+                                    </a>
+                                  
+                                </div>
+                                <div class="filter-card-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta" style="font-size: small;">$174,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5 style="font-size: small;">Camz Ferrari Portofino M</h5>
+                                    </a>
+                                    <span class="meta-content" style="font-size: small;"><strong>Listed by:</strong> <a href="#">Car House</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="card-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gauge"></i></span>
+                                            120cc
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-steering-wheel"></i></span>
+                                            Manual
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gas-pump"></i></span>
+                                            Petrol
+                                        </div>
+                                    </div>
+                                    <a href="inventory-details.html" class="btn as-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6  popular grid-item wow fadeInUp" data-class="popular" style="position: absolute; left: 573px; top: 457.635px; visibility: visible; animation-name: fadeInUp;">
+                            <div class="special-box cab-box">
+                                <div class="special-img">
+                                    <a href="#" class="bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car8.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                                        <img src="/Content/assets/Custom/Tour/car8.jpg" class="img-fluid blur-up lazyload bg-img" alt="" style="display: none;">
+                                    </a>
+                                   
+                                </div>
+                                <div class="filter-card-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta" style="font-size: small;">$174,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5 style="font-size: small;">Camz Ferrari Portofino M</h5>
+                                    </a>
+                                    <span class="meta-content" style="font-size: small;"><strong>Listed by:</strong> <a href="#">Car House</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="card-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gauge"></i></span>
+                                            120cc
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-steering-wheel"></i></span>
+                                            Manual
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gas-pump"></i></span>
+                                            Petrol
+                                        </div>
+                                    </div>
+                                    <a href="inventory-details.html" class="btn as-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6  latest grid-item wow fadeInUp" data-class="latest" style="position: absolute; left: 859.5px; top: 457.635px; visibility: visible; animation-name: fadeInUp;">
+                            <div class="special-box cab-box">
+                                <div class="special-img">
+                                    <a href="#" class="bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car9.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                                        <img src="/Content/assets/Custom/Tour/car9.jpg" class="img-fluid blur-up lazyload bg-img" alt="" style="display: none;">
+                                    </a>
+                                  
+                                </div>
+                                <div class="filter-card-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta" style="font-size: small;">$174,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5 style="font-size: small;">Camz Ferrari Portofino M</h5>
+                                    </a>
+                                    <span class="meta-content" style="font-size: small;"><strong>Listed by:</strong> <a href="#">Car House</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="card-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gauge"></i></span>
+                                            120cc
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-steering-wheel"></i></span>
+                                            Manual
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="fa-solid fa-gas-pump"></i></span>
+                                            Petrol
+                                        </div>
+                                    </div>
+                                    <a href="inventory-details.html" class="btn as-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $('.grid').isotope({
+            itemSelector: '.grid-item',
+        });
+
+        $('.filter-button-group').on('click', 'li', function () {
+            var filterValue = $(this).attr('data-filter');
+            $('.grid').isotope({ filter: filterValue });
+            $('.filter-button-group li').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        var i = 0;
+        var numDotGroups = 0; 
+        var mappedSlideIndex = 0; 
+        $('.slider').find('button').first().attr({
+            'role': 'tab',
+            'id': 'slick-slide-control' + _.instanceUid + i,
+            'aria-controls': 'slick-slide' + _.instanceUid + mappedSlideIndex,
+            'aria-label': (i + 1) + ' of ' + numDotGroups,
+            'aria-selected': null,
+            'tabindex': '-1'
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

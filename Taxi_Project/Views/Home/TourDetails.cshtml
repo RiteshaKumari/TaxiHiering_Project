@@ -1,0 +1,912 @@
+﻿@model Taxi_Project.Models.tbl_TourDetail
+
+
+
+@{
+    ViewBag.Title = "TourDetails";
+}
+
+
+<link href="~/Content/assets/css/Tour.css" rel="stylesheet" />
+
+<style>
+    .single-section .description-section .description-details .menu-part.about .about-sec ul {
+        padding-left: 25px;
+    }
+
+    .single-section .description-section .description-details .menu-part .accordion-plan .card .card-header button:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 6px solid #353535;
+        right: 20px;
+        top: 20px;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .single-section .description-section .description-details .menu-part.about .about-sec ul li {
+        list-style-type: square;
+        display: list-item;
+        text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+        line-height: 1.7;
+        letter-spacing: 0.04em;
+    }
+
+    ul {
+        margin-bottom: 0;
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+    }
+
+    ol, ul, dl {
+        margin-top: 0;
+    }
+
+    li {
+        display: list-item; /* Change to list-item to fix bullet point issue */
+    }
+
+    .fa-marker:before {
+        content: "\f5a1";
+    }
+
+    .fa-map-marker:before {
+        content: "\f041";
+    }
+
+    .fa-map-marker-alt:before {
+        content: "\f3c5";
+    }
+
+    .row div[class*="col-"], .row .col {
+        position: relative;
+    }
+
+
+
+    ::marker {
+        unicode-bidi: isolate;
+        font-variant-numeric: tabular-nums;
+        text-transform: none;
+        text-indent: 0px;
+        text-align: start;
+        text-align-last: start;
+    }
+
+    .card-body {
+        padding: 1rem;
+        font-size: 1rem;
+        font-style: italic;
+        background-color: #f9f9f9;
+    }
+
+
+    .special-section.grid-box .special-box {
+        border-radius: 18px !important;
+    }
+
+    .special-section .special-box .special-img {
+        border-radius: 10px !important;
+    }
+
+
+    .pactext {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+    .breadcrumb-section {
+        height: 155px !important;
+    }
+
+        .breadcrumb-section .breadcrumb-content {
+            height: 154px !important;
+            background-color: black !important;
+            opacity: 0.5;
+        }
+
+    .hov:hover {
+        color: red;
+    }
+
+    .breadcrumb-section .breadcrumb-content.overlay-black > div {
+        background-color: transparent;
+    }
+
+
+    .img-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+        cursor: pointer;
+    }
+
+        .img-box img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img-box:hover img {
+            transform: scale(1.1);
+        }
+
+
+
+
+
+
+    .slider {
+        height: 250px;
+        align-items: center;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slide-track {
+        display: flex;
+        width: calc(600px * 7);
+        animation: scroll 10s linear infinite;
+    }
+
+    .slider:hover .slide-track {
+        animation-play-state: paused;
+    }
+
+    .slide {
+        height: 200px;
+        width: 250px;
+        display: flex;
+        align-items: stretch;
+        padding: 15px;
+        perspective: 100px;
+        position: relative;
+    }
+
+    .popup {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        width: 88%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        transform: translateY(50px);
+        opacity: 0;
+        transition: transform 0.3s, opacity 0.3s;
+        z-index: 9999;
+    }
+
+    .slide:hover .popup {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .popup span {
+        display: block;
+        font-size: 14px;
+        margin-top: -9px;
+    }
+
+    @@keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-250px * 8));
+        }
+    }
+
+    .booking-bottom-section {
+        background-color: #ffe7e7;
+        padding: 20px;
+        margin-top: 25px;
+        border-radius: 15px;
+    }
+
+    .ritour1 {
+        color: red;
+    }
+
+    .image-section {
+        border: 2px solid transparent;
+        box-shadow: 0 0 40px 10px rgb(0 0 0 / 5%);
+    }
+
+    .card {
+        border: none;
+    }
+
+    .btn-check:focus + .btn, .btn:focus {
+        box-shadow: none;
+    }
+
+    .space {
+        padding: 25px 5px 25px 5px;
+    }
+
+    .accordion-body {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .card-img-container {
+        position: relative;
+    }
+
+    .card-title {
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease;
+        text-align: center;
+    }
+
+    .card-img-container:hover .card-title {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+
+    .timeline {
+        position: relative;
+    }
+
+        .timeline::before {
+            content: '';
+            background: #C5CAE9;
+            width: 5px;
+            height: 95%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    .timeline-item {
+        width: 100%;
+    }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            float: right;
+            padding: 40px 30px 10px 30px;
+        }
+
+            .timeline-item:nth-child(even) .timeline-content .date {
+                right: auto;
+                left: 0;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content::after {
+                content: '';
+                position: absolute;
+                border-style: solid;
+                width: 0;
+                height: 0;
+                top: 30px;
+                left: -15px;
+                border-width: 10px 15px 10px 0;
+                border-color: transparent #f5f5f5 transparent transparent;
+            }
+
+        .timeline-item::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+    .timeline-content {
+        position: relative;
+        width: 45%;
+        padding: 10px 30px;
+        border-radius: 4px;
+        background: #f5f5f5;
+        box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
+    }
+
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            width: 0;
+            height: 0;
+            top: 30px;
+            right: -15px;
+            border-width: 10px 0 10px 15px;
+            border-color: transparent transparent transparent #f5f5f5;
+        }
+
+    .timeline-img {
+        width: 30px;
+        height: 30px;
+        background: #3F51B5;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        margin-top: 25px;
+        margin-left: -15px;
+    }
+
+
+    .timeline-card {
+        padding: 0 !important;
+    }
+
+        .timeline-card p {
+            padding: 0 20px;
+        }
+
+        .timeline-card a {
+            margin-left: 20px;
+        }
+
+    .timeline-item .timeline-img-header {
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(/Content/assets/img/Tour/DM_20230424181514_001.jpg) center center no-repeat;
+        background-size: cover;
+    }
+
+    .timeline-img-header {
+        height: 200px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+        .timeline-img-header h2 {
+            color: #FFFFFF;
+            position: absolute;
+            bottom: 5px;
+            left: 20px;
+        }
+
+    .date {
+        background: #FF4081;
+        display: inline-block;
+        color: #FFFFFF;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @@media screen and (max-width: 768px) {
+        .timeline::before {
+            left: 50px;
+        }
+
+        .timeline .timeline-img {
+            left: 50px;
+        }
+
+        .timeline .timeline-content {
+            max-width: 100%;
+            width: auto;
+            margin-left: 70px;
+        }
+
+        .timeline .timeline-item:nth-child(even) .timeline-content {
+            float: none;
+        }
+
+        .timeline .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            width: 0;
+            height: 0;
+            top: 30px;
+            left: -15px;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent #f5f5f5 transparent transparent;
+        }
+    }
+
+    .container.my-container {
+        margin-top: 45px;
+    }
+</style>
+
+
+
+<section class="breadcrumb-section parallax-img pt-0 bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/breadcrumb1.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block; height: 155px;">
+    <img src="/Content/assets/Custom/Tour/breadcrumb1.jpg" class="bg-img img-fluid blur-up lazyloaded" alt="" style="display: none;">
+    <div class="breadcrumb-content overlay-black">
+        <div style="z-index:10000;">
+            <h2 style="color:white;"> Package Details</h2>
+
+        </div>
+    </div>
+
+</section>
+
+<br />
+<br />
+
+
+<section class="single-section bg-inner small-section">
+    @if (ViewBag.result1 != null)
+    {
+        foreach (var tour in ViewBag.result1)
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="full-width-detail">
+                            <div class="about-section three-image about_page">
+                                <div class="row">
+                                    <div class="col-xl-7">
+                                        <div class="image-section">
+                                            <div class="img-box">
+                                                <img style="width: 666px; height: 444px;" src="@Url.Content(tour.Tourimg)" data-tilt="" data-tilt-perspective="110" data-tilt-speed="400" data-tilt-max="1.2" class="img-fluid blur-up lazyloaded" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5">
+                                        <div class="about-text about-text-gray">
+                                            <div class="right-detail">
+                                                <h2 style="color:red; font-weight:700; padding-top:15px;">TOUR INTRODUCTION</h2>
+                                                <div class="bottom-detail">
+                                                    <p style="color:black; text-align:justify; line-height:30px;">
+                                                        @Html.Raw(tour.TourIntro)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <br />
+            <div class="col-12 small-section pb-0" style="border: 2px solid transparent; box-shadow: 0 0 40px 10px rgb(0 0 0 / 5%); padding: 10px 54px 54px 54px; margin-top: 60px;">
+                <div class="description-section tab-section">
+                    <div class="description-details tab-content" id="top-tabContent">
+                        <div class="menu-part about tab-pane fade show active" id="highlight">
+                            <div class="about-sec">
+                                <p>
+                                    <h2 style="color:red; font-weight:700; padding-top:10px;">OUR HIGHLIGHTS</h2>
+                                    <br />
+                                    <div class="pat">
+                                        <div class="part">
+                                            <div class="ourpart">
+                                                <div class="ico">
+                                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                </div>&nbsp;&nbsp;&nbsp;
+                                                <div class="icopart">
+                                                    <h6>Cost</h6>
+                                                    <h6 style="color:dimgray; font-size:17px; font-weight:200;">Enquiry About Cost</h6>
+                                                </div>
+                                            </div>
+                                            <div class="ourpart">
+                                                <div class="ico">
+                                                    <i class="fa-solid fa-taxi"></i>
+                                                </div>&nbsp;&nbsp;&nbsp;
+                                                <div class="icopart">
+                                                    <h6>Type Of Tour</h6>
+                                                    <h6 style="color:dimgray; font-size:17px; font-weight:200;">Private Tour</h6>
+                                                </div>
+                                            </div>
+                                            <div class="ourpart">
+                                                <div class="ico">
+                                                    <i class="fa-brands fa-ethereum"></i>
+                                                </div>&nbsp;&nbsp;&nbsp;
+                                                <div class="icopart">
+                                                    <h6>Tour Theme</h6>
+                                                    <h6 style="color:dimgray; font-size:17px; font-weight:200;">@tour.TourTheme</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+                        <div class="detail-img">
+                            <img src="/Content/assets/Custom/Tour/spain.jpg" class="img-fluid blur-up lazyloaded" alt="">
+                        </div>
+                    </div>
+                    <br /><br /><br />
+                    <div class="con3">
+                        <div class="col-lg-8 col-md-12 col-sm-12">
+                            <div class="menu-part accordion show tab-pane fade active ">
+                                <h2 style="font-weight:700;color:red">Itenary</h2><br />
+                                <p>
+                                    <span style="color:black; font-size:15px;">
+                                        Tour:-
+                                    </span>
+                                    <span style="font-size:15px; color:dimgray; font-weight:300;">
+                                        @Html.Raw(tour.Itenary)
+                                    </span>
+                                </p>
+                                <p>@Html.Raw(tour.DayPlaceInfor)</p>
+                                <br />
+                                @foreach (var item4 in ViewBag.result4)
+                                {
+                                    <div class="bg-smoke space" id="faq-sec">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-xl-12 col-lg-9">
+                                                    <div class="accordion-area accordion" id="faqAccordion">
+                                                        <div class="accordion-card style2">
+                                                            <div class="accordion-header" id="collapse-item-1">
+                                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">@item4.Dayno</button>
+                                                            </div>
+                                                            <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion" style="">
+                                                                <div class="accordion-body">
+                                                                    <div class="highlight">
+                                                                        <p>Day Introduction :<span style="color:red;">@item4.DayTitle</span></p>
+                                                                        <ul>
+                                                                            <li>
+                                                                                @Html.Raw(item4.DayDetails)
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                <section class="single-section bg-inner small-section">
+                                    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 20px; background-color: whitesmoke; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); border-radius: 8px;">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="full-width-detail">
+                                                    @if (ViewBag.result3 != null)
+                                                    {
+                                                        foreach (var item3 in ViewBag.result3)
+                                                        {
+                                                            <div class="about-section three-image about_page">
+                                                                <div class="row">
+                                                                    <div class="col-xl-4">
+                                                                        <div class="image-section">
+                                                                            <div class="img-box">
+                                                                                <img src="@item3.Placeimg" data-tilt="" data-tilt-perspective="110" data-tilt-speed="400" data-tilt-max="1.2" class="img-fluid blur-up lazyloaded" alt="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-8 ritdes1">
+                                                                        <div class="about-text about-text-gray">
+                                                                            <div class="right-detail">
+                                                                                <h4 style="color:red;font-weight:700;">@item3.PLaceTitle</h4>
+                                                                                <div class="bottom-detail">
+                                                                                    <p style="color:black;text-align:justify;line-height:2;">
+                                                                                        @Html.Raw(item3.Placeinfor)
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <br />
+                                                            <br />
+                                                        }
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                @foreach (var item2 in ViewBag.result2)
+                                {
+                                    <div class="bg-smoke space" id="faq-sec">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-xl-12 col-lg-9">
+                                                    <div class="accordion-area accordion" id="faqAccordion">
+                                                        <div class="accordion-card style2">
+                                                            <div class="accordion-header" id="collapse-item-1">
+                                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">@item2.Dayno</button>
+                                                            </div>
+                                                            <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion" style="">
+                                                                <div class="accordion-body">
+                                                                    <div class="highlight">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <p>@item2.DayPlaceTitle</p>
+                                                                                @Html.Raw(item2.DayPLaceDetail)
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 see">
+                            <div class=" booking-bottom-section ">
+                                <div class="single-sidebar mt-0">
+                                    <div class="selection-section">
+                                        @using (Html.BeginForm("TourDetails", "Home", FormMethod.Post))
+                                        {
+                                            <h4 class="title" style="color:red">Book this tour</h4>
+                                            <div class="book-btn-section border-top-0">
+                                                <div class="detail-top">
+                                                    @Html.Hidden("url", (object)ViewBag.path)
+                                                    @Html.TextBoxFor(model => model.TourPackageName, new { @Value = tour.TourPackageName })
+                                                    @Html.TextBoxFor(model => model.bookingtourname, null, new { @class = "form-control", @PlaceHolder = "First name" })
+                                                    @Html.ValidationMessageFor(model => model.bookingtourname, null, new { @class = "text-danger" })
+                                                    @Html.TextBoxFor(model => model.bookingtouremail, null, new { @class = "form-control", @PlaceHolder = "Enter your email" })
+                                                    @Html.ValidationMessageFor(model => model.bookingtouremail, null, new { @class = "text-danger" })
+                                                    @Html.TextBoxFor(model => model.bookingtourphone, null, new { @class = "form-control", @PlaceHolder = "Phone Number" })
+                                                    @Html.ValidationMessageFor(model => model.bookingtourphone, null, new { @class = "text-danger" })
+                                                    @Html.TextBoxFor(model => model.bookingtourdate, null, new { @class = "form-control", @PlaceHolder = "Enter Date" })
+                                                    @Html.ValidationMessageFor(model => model.bookingtourdate, null, new { @class = "text-danger" })
+                                                </div>
+                                                <div class="rooms-section">
+                                                    @Html.TextBoxFor(model => model.bookingtourRoom, null, new { @class = "form-control", @PlaceHolder = "rooms and guests" })
+                                                    @Html.ValidationMessageFor(model => model.bookingtourRoom, null, new { @class = "text-danger" })
+                                                </div>
+                                                <div class="text-end ">
+                                                    <button class="btn btn-rounded btn-sm color1" id="submit" name="submit" type="submit">Start My Journey</button>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br /><br />
+                        <div class="container my-container">
+                            <div class="menu-part about tab-pane fade show active" id="highlight">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="about-sec">
+                                            <h4 class="mb-3 ritour1">Inclusions</h4>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2">@Html.Raw(tour.TourInclusion)</li>
+                                                <li class="mb-2">AC Private car throughout the tour inclusive of all toll, parking, driver charges.</li>
+                                                <li class="mb-2">Elephant Ride to Amber</li>
+                                                <li class="mb-2">Sightseeing of Monuments</li>
+                                                <li class="mb-2">Mineral Water to be served during the Sightseeing</li>
+                                                <li class="mb-2">Well Experienced English Speaking Tour Guide Service (Approved by Ministry of Tourism, Government)</li>
+                                                <li class="mb-2">Pickup and drop</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 margin-up">
+                                        <div class="about-sec">
+                                            <h4 class="mb-3 ritour1">Exclusions</h4>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2">Entrance Tickets of all monuments</li>
+                                                <li class="mb-2">Breakfast/Lunch/Dinner/Drinks etc.</li>
+                                                <li class="mb-2">Tip to driver and guide</li>
+                                                <li class="mb-2">Any personal expenses</li>
+                                                <li class="mb-2">Insurance and medical care</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No data available</p>
+    }
+</section>
+
+@*@foreach (var item in Model)
+    {
+        <div class="col-xl-3 col-lg-4 col-sm-6 grid-item popular">
+            <div class="special-box p-0">
+                <div class="special-imgg">
+                    <a href="@Url.Action("Details", "TourPackage", new { id = item.ID })" class="bg-size blur-up lazyloaded">
+                        <img src="@item.PackageImage" class="img-fluid blur-up lazyload bg-img" alt="Package Image">
+                    </a>
+                </div>
+                <div class="special-content">
+                    <div class="pactext">
+                        <div>
+                            <i class="fa-regular fa-clock" style="color:red;"></i>&nbsp;<span style="color:#b3a7a7;font-size:15px;">@item.Duration</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="@Url.Action("Details", "TourPackage", new { id = item.ID })">
+                            <h5 class="hov">@item.PackageTitle</h5>
+                        </a>
+                    </div>
+                    <p><i class="fa-regular fa-location-dot" style="color:red;"></i>&nbsp;<span>@item.Location</span></p>
+                    <a href="@Url.Action("Details", "TourPackage", new { id = item.ID })" class="btn as-btn btn-sm d-block">View Details&nbsp;<i class="fas fa-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+    }*@
+
+
+
+
+
+
+
+<div class="slider">
+    <div class="slide-track">
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Lotus Temple.jpg">
+            <div class="popup">
+                <strong> Lotus Temple</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/India Gate.jpg">
+            <div class="popup">
+                <strong>India Gate</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Taj Mahal.jpg">
+            <div class="popup">
+                <strong>Taj Mahal</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Humayuns Tomb.jpg">
+            <div class="popup">
+                <strong>Humayuns Tomb</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Red Fort.jpg">
+            <div class="popup">
+                <strong> Red Fort</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Akshardham Temple.jpg">
+            <div class="popup">
+                <strong> Akshardham Temple</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Bangla Sahib Gurudwara.jpg">
+            <div class="popup">
+                <strong>Bangla Sahib Gurudwara</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Rashtrapati Bhawan.jpg">
+            <div class="popup">
+                <strong> Rashtrapati Bhawan</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+
+
+
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Lotus Temple.jpg">
+            <div class="popup">
+                <strong> Lotus Temple</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/India Gate.jpg">
+            <div class="popup">
+                <strong>India Gate</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Taj Mahal.jpg">
+            <div class="popup">
+                <strong>Taj Mahal</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Humayuns Tomb.jpg">
+            <div class="popup">
+                <strong>Humayuns Tomb</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Red Fort.jpg">
+            <div class="popup">
+                <strong> Red Fort</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Taj Mahal.jpg">
+            <div class="popup">
+                <strong>Taj Mahal</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Bangla Sahib Gurudwara.jpg">
+            <div class="popup">
+                <strong>Bangla Sahib Gurudwara</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/Content/assets/img/Tour/Lotus Temple.jpg">
+            <div class="popup">
+                <strong> Rashtrapati Bhawan</strong>
+                <span>Delhi, India</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+
+
+    $(document).ready(function () {
+
+        $('.grid').isotope({
+            itemSelector: '.grid-item',
+        });
+
+
+        // filter items on button click
+        $('.filter-button-group').on('click', 'li', function () {
+            var filterValue = $(this).attr('data-filter');
+            $('.grid').isotope({ filter: filterValue });
+            $('.filter-button-group li').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+
+</script>
+
+
+
+
+
+

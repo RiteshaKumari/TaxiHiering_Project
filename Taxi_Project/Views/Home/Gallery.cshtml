@@ -1,0 +1,518 @@
+﻿@model List<Taxi_Project.Models.tbl_gallery>
+
+@{
+    ViewBag.Title = "Gallery";
+}
+
+
+<style>
+
+    :root {
+        --accent: #dc3545;
+        --text: #818182;
+        --black: #000;
+        --gold: #ffc107;
+        --yellow: #fff3cd;
+        --brown: #856404;
+        --gutter: 20px;
+    }
+
+    body {
+        font-size: 16px;
+        position: relative;
+        line-height: 1.65;
+        font-family: 'Roboto', sans-serif;
+        overflow-x: hidden;
+        color: var(--text);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: var(--gutter);
+        padding-left: var(--gutter);
+    }
+
+    /* Style Section Gallery */
+    .section-gallery {
+        background: rgba(var(--black), 0.9);
+        padding-top: calc(var(--gutter) * 2);
+        padding-bottom: calc(var(--gutter) * 2);
+    }
+
+        .section-gallery header {
+            text-align: center;
+            margin-bottom: calc(var(--gutter) * 2);
+        }
+
+            .section-gallery header h2 {
+                color: var(--gold);
+                text-transform: uppercase;
+            }
+
+        .section-gallery .row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: var(--gutter);
+        }
+
+            .section-gallery .row img {
+                width: 100%;
+                outline: 2px solid transparent;
+                transition: all 1s;
+                cursor: pointer;
+            }
+
+                .section-gallery .row img:hover {
+                    outline: 2px solid var(--gold);
+                }
+
+    .box-shadow {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Style Gallery */
+    .gallery-bg {
+        background-color: rgba(var(--black), 0.9);
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery-slider {
+        position: relative;
+        width: 960px;
+        height: 641px;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+    }
+
+        .gallery-slider img {
+            position: absolute;
+            z-index: 99991;
+            opacity: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery-slider .gallery-active {
+            z-index: 99991;
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .gallery-slider button {
+            position: absolute;
+            top: 45%;
+            z-index: 99992;
+            cursor: pointer;
+            background-color: var(--black);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            transition: background-color 0.5s ease-out;
+        }
+
+            .gallery-slider button:hover {
+                background-color: rgba(var(--black), 0.7);
+            }
+
+            .gallery-slider button:focus {
+                outline: none;
+            }
+
+    .next {
+        right: 0;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+
+    .gallery-slider .gallery-close {
+        position: absolute;
+        z-index: 99992;
+        top: 20px;
+        right: 0;
+        font-size: 24px;
+        background-color: rgba(220, 53, 69, 0.7);
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        border: none;
+    }
+
+    .gallery-close:hover {
+        background-color: rgba(255, 90, 95, .5);
+    }
+
+    .gallery-close:focus {
+        outline: none;
+    }
+
+    .gallery-alt {
+        position: absolute;
+        z-index: 99992;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 10px;
+        background-color: rgba(101, 67, 33, .9);
+        color: #fff;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    }
+
+    .gallery-counter {
+        position: absolute;
+        z-index: 99992;
+        top: 0;
+        left: 0;
+        padding: 2px 10px;
+        background-color: rgba(255, 215, 0, .5);
+        color: #fff;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .gallery-slider .gallery-counter {
+        position: absolute;
+        z-index: 99992;
+        top: 30px;
+        left: 0;
+        padding: 2px 10px;
+        background-color: rgba(255, 193, 7, 0.5);
+        color: #fff;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /* Animation */
+    @@keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+    /* For mobile view */
+    @@media only screen and (max-width: 768px) {
+        .section-gallery .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .section-gallery .row img {
+                width: 300px;
+                margin: 0 10px 20px 10px;
+                cursor: pointer;
+                border: 1px solid red;
+                border-radius: 4px;
+                padding: 5px;
+                height: 150px;
+                object-fit: cover;
+            }
+
+        .gallery-slider img {
+            height: 600px;
+        }
+    }
+
+    /* For desktop view */
+    @@media only screen and (min-width: 769px) {
+        .section-gallery .row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: var(--gutter);
+        }
+
+            .section-gallery .row img {
+                width: 100%;
+                height: 350px;
+                outline: 2px solid transparent;
+                transition: all 1s;
+                cursor: pointer;
+                margin-bottom: 20px;
+                margin-right: 20px;
+                margin-left: 20px;
+                cursor: pointer;
+                border: 1px solid red;
+                border-radius: 4px;
+                padding: 5px;
+                object-fit: cover;
+            }
+
+                .section-gallery .row img:hover {
+                    outline: 2px solid var(--gold);
+                }
+
+                .section-gallery .row img:active {
+                    outline: 2px solid var(--gold);
+                }
+
+        .gallery-bg {
+            background-color: rgba(var(--black), 0.9);
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-slider img {
+            position: absolute;
+            z-index: 99991;
+            opacity: 0;
+            width: 100%;
+            height: 600px;
+        }
+    }
+
+
+    .gallery img {
+        width: 100%;
+        max-width: 350px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .gallery::after {
+        content: "";
+        width: 350px;
+    }
+
+    img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+
+
+
+
+    .special-section.grid-box .special-box {
+        border-radius: 18px !important;
+    }
+
+    .special-section .special-box .special-img {
+        border-radius: 10px !important;
+    }
+
+    .pactext {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+    .breadcrumb-section {
+        height: 155px !important;
+    }
+
+        .breadcrumb-section .breadcrumb-content {
+            height: 154px !important;
+            background-color: black !important;
+            opacity: 0.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+    .hov:hover {
+        color: red;
+    }
+
+    .breadcrumb-section .breadcrumb-content.overlay-black > div {
+        background-color: transparent;
+    }
+
+    img:hover {
+        transform: translateZ(20px) !important;
+    }
+</style>
+
+
+
+
+<section class="breadcrumb-section parallax-img pt-0 bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car1.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+    <img src="~/Content/assets/Custom/Tour/car1.jpg" class="bg-img img-fluid blur-up lazyloaded" alt="" style="display: none;">
+    <div class="breadcrumb-content overlay-black">
+        <h1 class="breadcumb-title" style="font-size:40px;">Gallery</h1>
+        <ul class="breadcumb-menu">
+            <li><a href="/">Home</a></li>
+            <li>Gallery</li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+
+<section class="section-gallery">
+    <header><h2 style="color:red">Gallery</h2></header>
+    <div class="container">
+        <div class="row gallery gallery-1">
+
+            @foreach (var image in Model)
+            {
+                <img data-img="@image.popupimg" src="@image.srcimg" alt="@image.alt" />
+            }
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+    window.addEventListener('load', function () {
+        galleryInit('.gallery-1');
+        galleryInit('.gallery-2');
+    });
+
+    const tagBody = document.querySelector('body');
+
+    function galleryInit(id) {
+        let galleryImg = document.querySelectorAll(`${id} img`);
+
+        galleryImg.forEach((items, i, array) => {
+            items.addEventListener('click', (e) => {
+
+                insertNewGallerySlider(e);
+                gallaryClose(e);
+
+                let gallerySliderImg = document.querySelectorAll('.gallery-slider img');
+                let gallerySlider = document.querySelector('.gallery-slider');
+
+                gallerySliderImg[i].classList.add('gallery-active');
+
+                gallerySlider.insertAdjacentHTML('afterBegin', `<div class="gallery-alt">${items.alt}</div>`);
+                gallerySlider.insertAdjacentHTML('afterBegin', `<div class="gallery-counter">${i + 1} / ${array.length}</div>`);
+
+                // Slider Click
+                document.querySelector('.next').addEventListener('click', () => {
+                    gallerySliderImg[i].classList.remove('gallery-active');
+                    i++;
+                    if (i == gallerySliderImg.length) i = 0;
+                    gallerySliderImg[i].classList.add('gallery-active');
+                    sliderDinamicElements();
+                });
+
+                document.querySelector('.prev').addEventListener('click', () => {
+                    gallerySliderImg[i].classList.remove('gallery-active');
+                    i--;
+                    if (i < 0) i = gallerySliderImg.length - 1;
+                    gallerySliderImg[i].classList.add('gallery-active');
+                    sliderDinamicElements();
+                });
+
+                gallerySliderImg.forEach((items) => {
+                    items.addEventListener('contextmenu', ePreventDefaultMouse);
+                    items.addEventListener('mousedown', ePreventDefaultMouse);
+                });
+            });
+
+            items.addEventListener('contextmenu', ePreventDefaultMouse);
+            items.addEventListener('mousedown', ePreventDefaultMouse);
+        });
+
+        function insertNewGallerySlider(e) {
+            let sliderHtml = `<div class="gallery-bg"><div class="gallery-slider">
+                                    <button class="gallery-close">&#10006;</button><button class="next">Next</button><button class="prev">Prev</button>
+                              </div></div>`;
+            tagBody.insertAdjacentHTML('afterBegin', sliderHtml);
+            if (!e.target.classList.contains('gallery-bg')) tagBody.style.overflowY = 'hidden';
+            galleryImg.forEach((items) => {
+                document.querySelector('.gallery-slider').innerHTML += `<img src="${items.dataset.img}" alt="${items.alt}">`;
+            });
+        };
+
+        function gallaryClose(e) {
+            e.preventDefault();
+            let galleryBg = document.querySelector('.gallery-bg');
+            document.querySelector('.gallery-close').addEventListener('click', () => {
+                galleryBg.remove();
+                tagBody.style.overflowY = 'scroll';
+            });
+            galleryBg.addEventListener('click', (e) => {
+                if (e.target.classList.contains('gallery-bg')) {
+                    galleryBg.remove();
+                    tagBody.style.overflowY = 'scroll';
+                };
+            });
+            document.onkeydown = (e) => {
+                if (e.code == 'Escape') {
+                    galleryBg.remove();
+                    tagBody.style.overflowY = 'scroll';
+                } else if (e.code == 'ArrowRight') {
+                    let gallerySliderImg = document.querySelectorAll('.gallery-slider img');
+                    gallerySliderImg[i].classList.remove('gallery-active');
+                    i++;
+                    if (i == gallerySliderImg.length) i = 0;
+                    gallerySliderImg[i].classList.add('gallery-active');
+                    sliderDinamicElements();
+                }
+            };
+        };
+
+        function sliderDinamicElements() {
+            document.querySelectorAll('.gallery-slider img').forEach((items, i, array) => {
+                let gallerySlider = document.querySelector('.gallery-slider');
+                if (items.classList.contains('gallery-active')) {
+                    document.querySelector('.gallery-slider .gallery-alt').remove();
+                    gallerySlider.insertAdjacentHTML('afterBegin', `<div class="gallery-alt">${items.alt}</div>`);
+
+                    document.querySelector('.gallery-slider .gallery-counter').remove();
+                    gallerySlider.insertAdjacentHTML('afterBegin', `<div class="gallery-counter">${i + 1} / ${array.length}</div>`);
+                };
+            });
+        };
+
+    };
+
+
+    document.addEventListener('keydown', function (e) {
+        if (e.code === 'ArrowRight') {
+            const nextBtn = document.querySelector('.next');
+            if (nextBtn) {
+                nextBtn.click();
+            }
+        } else if (e.code === 'ArrowLeft') {
+            const prevBtn = document.querySelector('.prev');
+            if (prevBtn) {
+                prevBtn.click();
+            }
+        }
+    });
+
+    function ePreventDefaultMouse(e) {
+        e.preventDefault();
+    };
+
+</script>
+
+
+
+
+
+
+

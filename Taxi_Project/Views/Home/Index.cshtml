@@ -1,0 +1,992 @@
+﻿@using Taxi_Project.Models
+@model tbl_BookingVehicle
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+
+    .girlimage {
+        transform: scaleX(-1);
+    }
+
+    .img3 {
+        width: 310px;
+        height: 280px;
+    }
+</style>
+
+<div class="as-hero-wrapper hero-slider-6">
+    <div class="as-hero-slide" data-bg-src="/Content/assets/img/bg/hero_bg_6_1.jpg">
+        <div class="hero-img">
+            <img src="/Content/assets/img/bg/hero_img-6.png" alt="Hero Image">
+            <img src="/Content/assets/img/bg/hero-shape-1.png" alt="shape" class="shape-1">
+            <img src="/Content/assets/img/bg/hero-shape-2.png" alt="shape" class="shape-2">
+            <img src="/Content/assets/img/bg/hero-shape-3.png" alt="shape" class="shape-3">
+            <img src="/Content/assets/img/bg/hero-shape-1.png" alt="shape" class="shape-4">
+            <img src="/Content/assets/img/bg/hero-shape-4.png" alt="shape" class="shape-5">
+            <img src="/Content/assets/img/bg/hero-shape-5.png" alt="shape" class="shape-6">
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="hero-style6">
+                <div class="video-btn">
+                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video">
+                        <i class="fas fa-play"></i>
+                    </a> How It Works?
+                </div>
+                <h1 class="hero-title">We Also Carry Out</h1>
+                <h1 class="hero-title">Logistics</h1>
+                <p class="hero-text">Dramatically scale backward compatible portals after market positioning deliverables sertively predominate rather.</p>
+                <div class="btn-group">
+                    <a href="#" class="as-btn style3">BOOK A TAXI</a>
+                    <a href="/OurFleet" class="as-btn style2">Search Vehicle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="space">
+    <div class="container">
+        <div class="title-area text-center">
+            <span class="sub-title ">CHECK OUT OUR FEATURES</span>
+            <h2 class="sec-title">Our Best Advantages</h2>
+        </div>
+        <div class="row as-carousel slider-shadow" data-slide-show="3" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="1">
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-grid">
+                    <div class="feature-grid_img">
+                        <img class="img3" width="310" height="207" src="/Content/assets/img/Tour/index1.jpg" alt="Image">
+                    </div>
+                    <div class="feature-grid_icon">
+                        <img src="/Content/assets/img/icon/feature_2_1.svg" alt="Icon">
+                    </div>
+                    <h3 class="box-title">SAFE GUARANTEE</h3>
+                    <p class="feature-grid_text">Competently expedite seamless results and just in time e-business. Collabo- ratively parallel task.</p>
+                    <a href="#" class="as-btn">
+                        VIEW DETAILS
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-grid">
+                    <div class="feature-grid_img">
+                        <img class="img3" width="310" height="207" src="/Content/assets/img/Tour/index2.jpg" alt="Image">
+                    </div>
+                    <div class="feature-grid_icon">
+                        <img src="/Content/assets/img/icon/feature_2_2.svg" alt="Icon">
+                    </div>
+                    <h3 class="box-title">FAST PICKUPS</h3>
+                    <p class="feature-grid_text">Enable sustainable e services for life grow biquitous through reliable is outside the box through.</p>
+                    <a href="#" class="as-btn">
+                        VIEW DETAILS
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-grid">
+                    <div class="feature-grid_img">
+                        <img class="img3" width="310" height="207" src="/Content/assets/img/Tour/index3.jpg" alt="Image">
+                    </div>
+                    <div class="feature-grid_icon">
+                        <img src="/Content/assets/img/icon/feature_2_3.svg" alt="Icon">
+                    </div>
+                    <h3 class="box-title">QUICK RIDE</h3>
+                    <p class="feature-grid_text">Cartsi sustainable e services for life grow biquitous through reliable is outside the box outside.</p>
+                    <a href="#" class="as-btn">
+                        VIEW DETAILS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="bg-smoke space" id="about-sec">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 mb-40 mb-xl-0">
+                <div class="img-box4 style2">
+                    <div class="img1">
+                        <img width="470" height="446" src="/Content/assets/img/normal/about_6_1.jpg" alt="About">
+                    </div>
+                    <div class="img2">
+                        <img width="320" height="386" src="/Content/assets/img/Tour/index4.jpg" alt="About">
+                    </div>
+                    <div class="as-experience">
+                        <h3 class="experience-year">
+                            <span class="counter-number">25</span>+
+                        </h3>
+                        <p class="experience-text">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="ps-xxl-4 ms-xxl-3">
+                    <div class="title-area mb-35">
+                        <span class="sub-title  about">More About Us</span>
+                        <h2 class="sec-title text-capitalize">We are The Best in <br>Your Town </h2>
+                    </div>
+                    <p class="mt-n2 mb-30">Brand team building results after premium web-readiness value web enabled e-business engage web enabled strategic...</p>
+                    <div class="about-feature-wrap">
+                        <div class="about-feature">
+                            <div class="about-feature_icon">
+                                <img src="/Content/assets/img/icon/about-feature_1.svg" alt="Icon">
+                            </div>
+                            <div class="media-body">
+                                <h3 class="about-feature_title">Best Services Company</h3>
+                                <p class="about-feature_text">Authoritative generate reliable application rather than progressive processes. Distinctively e-enable.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature_icon">
+                                <img src="/Content/assets/img/icon/about-feature_2.svg" alt="Icon">
+                            </div>
+                            <div class="media-body">
+                                <h3 class="about-feature_title">Long Distance Trip</h3>
+                                <p class="about-feature_text">Authoritative generate reliable application rather than progressive processes. Distinctively e-enable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/About" class="as-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="space">
+    <div class="container">
+        <div class="title-area text-center">
+            <span class="sub-title ">Our Awesome Service Fields</span>
+            <h2 class="sec-title">Our Best Services For You.</h2>
+        </div>
+        <div class="row slider-shadow as-carousel" id="slideListTab" data-asnavfor="#slideListBox" data-slide-show="3" data-lg-slide-show="3" data-md-slide-show="3" data-sm-slide-show="3" data-xs-slide-show="3" data-arrows="true" data-center-mode="true" data-xl-center-mode="true" data-ml-center-mode="true" data-lg-center-mode="true" data-md-center-mode="true" data-sm-center-mode="true" data-xs-center-mode="true">
+            <div class="col-md-6 col-lg-4">
+                <div class="service-list" data-bg-src="/Content/assets/img/bg/pattern_bg_4.png">
+                    <div class="service-list_icon">
+                        <img src="/Content/assets/img/icon/service_list_1.svg" alt="service Icon">
+                    </div>
+                    <div class="service-list_content">
+                        <span class="service-list_text">Service - 01</span>
+                        <h3 class="service-list_title">Airport Transport</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-list" data-bg-src="/Content/assets/img/bg/pattern_bg_4.png">
+                    <div class="service-list_icon">
+                        <img src="/Content/assets/img/icon/service_list_2.svg" alt="service Icon">
+                    </div>
+                    <div class="service-list_content">
+                        <span class="service-list_text">Service - 02</span>
+                        <h3 class="service-list_title">Business Transfer</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-list" data-bg-src="/Content/assets/img/bg/pattern_bg_4.png">
+                    <div class="service-list_icon">
+                        <img src="/Content/assets/img/icon/service_list_3.svg" alt="service Icon">
+                    </div>
+                    <div class="service-list_content">
+                        <span class="service-list_text">Service - 03</span>
+                        <h3 class="service-list_title">Regular Transport</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-list" data-bg-src="/Content/assets/img/bg/pattern_bg_4.png">
+                    <div class="service-list_icon">
+                        <img src="/Content/assets/img/icon/service_list_4.svg" alt="service Icon">
+                    </div>
+                    <div class="service-list_content">
+                        <span class="service-list_text">Service - 04</span>
+                        <h3 class="service-list_title">Online Booking</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="service-list-area">
+            <div class="as-carousel" id="slideListBox" data-fade="true" data-asnavfor="#slideListTab">
+                <div>
+                    <div class="service-list-box">
+                        <div class="service-img">
+                            <img src="/Content/assets/img/service/service_list_1.jpg" alt="Image">
+                        </div>
+                        <div class="content">
+                            <div class="service-info">
+                                <div class="service-info_icon">
+                                    <img src="/Content/assets/img/icon/service_list_1.svg" alt="service Icon">
+                                </div>
+                                <div class="service-info_content">
+                                    <span class="service-info_text">Our Service is all time best</span>
+                                    <h3 class="service-info_title">Airport Transport</h3>
+                                </div>
+                            </div>
+                            <p class="text">Monetize flexible action items before mission critical rabidly intuitive. Credit extend wireless experiences. Collaboratively transition emerging potentialities for high-payoff imperative. Continually impact technically sound sources without. Synergistically benchmark one-to-one web-readiness rather than intermediated information.</p>
+                            <a href="/OurService" class="as-btn">
+                                VIEW DETAILS
+                            </a>
+                            <div class="icon-overlay">
+                                <img src="/Content/assets/img/icon/service_list_1_1.svg" alt="service Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="service-list-box">
+                        <div class="service-img">
+                            <img src="/Content/assets/img/service/service_list_2.jpg" alt="Image">
+                        </div>
+                        <div class="content">
+                            <div class="service-info">
+                                <div class="service-info_icon">
+                                    <img src="/Content/assets/img/icon/service_list_2.svg" alt="service Icon">
+                                </div>
+                                <div class="service-info_content">
+                                    <span class="service-info_text">Our Service is all time best</span>
+                                    <h3 class="service-info_title">Business Transfer</h3>
+                                </div>
+                            </div>
+                            <p class="text">Monetize flexible action items before mission critical rabidly intuitive. Credit extend wireless experiences. Collaboratively transition emerging potentialities for high-payoff imperative. Continually impact technically sound sources without. Synergistically benchmark one-to-one web-readiness rather than intermediated information.</p>
+                            <a href="/OurService" class="as-btn">
+                                VIEW DETAILS
+                            </a>
+                            <div class="icon-overlay">
+                                <img src="/Content/assets/img/icon/service_list_1_2.svg" alt="service Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="service-list-box">
+                        <div class="service-img">
+                            <img src="/Content/assets/img/service/service_list_3.jpg" alt="Image">
+                        </div>
+                        <div class="content">
+                            <div class="service-info">
+                                <div class="service-info_icon">
+                                    <img src="/Content/assets/img/icon/service_list_3.svg" alt="service Icon">
+                                </div>
+                                <div class="service-info_content">
+                                    <span class="service-info_text">Our Service is all time best</span>
+                                    <h3 class="service-info_title">Regular Transport</h3>
+                                </div>
+                            </div>
+                            <p class="text">Monetize flexible action items before mission critical rabidly intuitive. Credit extend wireless experiences. Collaboratively transition emerging potentialities for high-payoff imperative. Continually impact technically sound sources without. Synergistically benchmark one-to-one web-readiness rather than intermediated information.</p>
+                            <a href="/OurService" class="as-btn">
+                                VIEW DETAILS
+                            </a>
+                            <div class="icon-overlay">
+                                <img src="/Content/assets/img/icon/service_list_1_3.svg" alt="service Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="service-list-box">
+                        <div class="service-img">
+                            <img src="/Content/assets/img/service/service_list_4.jpg" alt="Image">
+                        </div>
+                        <div class="content">
+                            <div class="service-info">
+                                <div class="service-info_icon">
+                                    <img src="/Content/assets/img/icon/service_list_4.svg" alt="service Icon">
+                                </div>
+                                <div class="service-info_content">
+                                    <span class="service-info_text">Our Service is all time best</span>
+                                    <h3 class="service-info_title">Online Booking</h3>
+                                </div>
+                            </div>
+                            <p class="text">Monetize flexible action items before mission critical rabidly intuitive. Credit extend wireless experiences. Collaboratively transition emerging potentialities for high-payoff imperative. Continually impact technically sound sources without. Synergistically benchmark one-to-one web-readiness rather than intermediated information.</p>
+                            <a href="/OurService" class="as-btn">
+                                VIEW DETAILS
+                            </a>
+                            <div class="icon-overlay">
+                                <img src="/Content/assets/img/icon/service_list_1_4.svg" alt="service Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="space">
+    <div class="container">
+        <div class="title-area text-center">
+            <span class="sub-title">Best Matched Taxi for You</span>
+            <h2 class="sec-title">Related Taxis</h2>
+        </div>
+        <div class="row slider-shadow as-carousel" data-slide-show="3" data-lg-slide-show="2" data-md-slide-show="2" data-arrows="true">
+            <div class="col-xl-4 col-md-6">
+                <div class="taxi-box">
+                    <div class="taxi-box_img">
+                        <img src="~/Content/assets/img/taxi/taxi_4_1.png" alt="taxi">
+                    </div>
+                    <h3 class="taxi-box_title">
+                        <a href="taxi-details.html">BMW X6 2013</a>
+                    </h3>
+                    <p class="taxi-box_rate">$0.85/km</p>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_1.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Car Doors:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_2.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Passengers:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_3.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Luggage Carry:</h3>
+                        <span class="taxi-feature_info">3</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_4.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Heated Seats:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_5.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Air Condition:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_6.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">One Board WIFI:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <a href="/OurFleet" class="as-btn">View Details</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="taxi-box">
+                    <div class="taxi-box_img">
+                        <img src="~/Content/assets/img/taxi/taxi_4_2.png" alt="taxi">
+                    </div>
+                    <h3 class="taxi-box_title">
+                        <a href="taxi-details.html">BMW M7 2017</a>
+                    </h3>
+                    <p class="taxi-box_rate">$1.85/km</p>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_1.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Car Doors:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_2.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Passengers:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_3.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Luggage Carry:</h3>
+                        <span class="taxi-feature_info">3</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_4.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Heated Seats:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_5.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Air Condition:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_6.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">One Board WIFI:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <a href="/OurFleet" class="as-btn">View Details</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="taxi-box">
+                    <div class="taxi-box_img">
+                        <img src="~/Content/assets/img/taxi/taxi_4_3.png" alt="taxi">
+                    </div>
+                    <h3 class="taxi-box_title">
+                        <a href="taxi-details.html">BMW A5 2015</a>
+                    </h3>
+                    <p class="taxi-box_rate">$0.60/km</p>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_1.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Car Doors:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_2.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Passengers:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_3.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Luggage Carry:</h3>
+                        <span class="taxi-feature_info">3</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_4.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Heated Seats:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_5.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Air Condition:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_6.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">One Board WIFI:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <a href="/OurFleet" class="as-btn">View Details</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="taxi-box">
+                    <div class="taxi-box_img">
+                        <img src="~/Content/assets/img/taxi/taxi_4_4.png" alt="taxi">
+                    </div>
+                    <h3 class="taxi-box_title">
+                        <a href="taxi-details.html">BMW S5 2015</a>
+                    </h3>
+                    <p class="taxi-box_rate">$1.05/km</p>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_1.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Car Doors:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_2.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Passengers:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_3.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Luggage Carry:</h3>
+                        <span class="taxi-feature_info">3</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_4.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Heated Seats:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_5.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Air Condition:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_6.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">One Board WIFI:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <a href="/OurFleet" class="as-btn">View Details</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="taxi-box">
+                    <div class="taxi-box_img">
+                        <img src="~/Content/assets/img/taxi/taxi_4_5.png" alt="taxi">
+                    </div>
+                    <h3 class="taxi-box_title">
+                        <a href="taxi-details.html">BMW S7 2017</a>
+                    </h3>
+                    <p class="taxi-box_rate">$0.45/km</p>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_1.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Car Doors:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_2.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Passengers:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_3.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Luggage Carry:</h3>
+                        <span class="taxi-feature_info">3</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_4.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Heated Seats:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_5.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Air Condition:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_6.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">One Board WIFI:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <a href="/OurFleet" class="as-btn">View Details</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="taxi-box">
+                    <div class="taxi-box_img">
+                        <img src="~/Content/assets/img/taxi/taxi_4_6.png" alt="taxi">
+                    </div>
+                    <h3 class="taxi-box_title">
+                        <a href="taxi-details.html">BMW S5 2015</a>
+                    </h3>
+                    <p class="taxi-box_rate">$0.48/km</p>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_1.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Car Doors:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_2.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Passengers:</h3>
+                        <span class="taxi-feature_info">4</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_3.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Luggage Carry:</h3>
+                        <span class="taxi-feature_info">3</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_4.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Heated Seats:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_5.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">Air Condition:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <div class="taxi-feature">
+                        <div class="taxi-feature_icon">
+                            <img src="~/Content/assets/img/icon/taxi_f_1_6.svg" alt="png">
+                        </div>
+                        <h3 class="taxi-feature_title">One Board WIFI:</h3>
+                        <span class="taxi-feature_info">Yes</span>
+                    </div>
+                    <a href="/OurFleet" class="as-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="space background-image" style="background-image: url(&quot;/Content/assets/img/bg/process_bg_1.jpg&quot;);">
+
+    <div class="container"><div class="title-area text-center"><span class="sub-title">Our Working Process</span><h2 class="sec-title text-white">How It Works</h2></div><div class="process-card-wrap"><div class="process-card"><div class="process-card_icon shape-icon"><i class="fat fa-shield-heart"></i> <span class="process-card_num">01</span></div><h3 class="process-card_title">SAFE GUARANTEE</h3><p class="process-card_text">Impact materials equity invested read simplify resource maximizing working experiences superior.</p></div><div class="process-card"><div class="process-card_icon shape-icon"><i class="fat fa-car-building"></i> <span class="process-card_num">02</span></div><h3 class="process-card_title">Fastest Pickups</h3><p class="process-card_text">Masona materials equity invested read simplify resource maximizing working experiences invested.</p></div><div class="process-card"><div class="process-card_icon shape-icon"><i class="fat fa-bridge-suspension"></i> <span class="process-card_num">03</span></div><h3 class="process-card_title">Quick Rides</h3><p class="process-card_text">Tamina materials equity invested read simplify resource maximizing working experiences workings.</p></div><span class="process-line"><img src="/Content/assets/img/shape/process_line_1.png" alt="line"></span></div></div>
+</section>
+
+
+
+<section class="space overlfow-hidden" data-bg-src="assets/img/bg/testi_bg_1.jpg">
+    <div class="container">
+        <div class="row justify-content-center justify-content-lg-between align-items-center">
+            <div class="col-lg-6">
+                <div class="title-area text-center text-lg-start">
+                    <span class="sub-title">Client’s Testimonial</span>
+                    <h2 class="sec-title">Our Happy Client’s Review</h2>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="sec-btn">
+                    <div class="icon-box">
+                        <button data-slick-prev="#testi-slide-1" class="slick-arrow default">
+                            <i class="far fa-arrow-left"></i>
+                        </button>
+                        <button data-slick-next="#testi-slide-1" class="slick-arrow default">
+                            <i class="far fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container as-container">
+        <div class="row slider-shadow as-carousel" id="testi-slide-1" data-slide-show="3" data-lg-slide-show="2" data-md-slide-show="2">
+            <div class="col-md-6 col-xl-4">
+                <div class="testi-card">
+                    <p class="testi-card_text">“Groactively synthesize schemas before foster like leveraged expertise user friendly business low before open source iterate.”</p>
+                    <div class="testi-card_profile">
+                        <div class="testi-card_img">
+                            <img src="/Content/assets/img/testimonial/testi_1_1.jpg" alt="Avater">
+                        </div>
+                        <div class="testi-card_info">
+                            <h3 class="testi-card_name">Ricardo Yosef</h3>
+                            <span class="testi-card_desig">CEO Founder</span>
+                        </div>
+                    </div>
+                    <div class="testi-card_icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="testi-card">
+                    <p class="testi-card_text">“Proactively synthesize schemas before foster like leveraged expertise user friendly business low before open source schemas.”</p>
+                    <div class="testi-card_profile">
+                        <div class="testi-card_img">
+                            <img src="~/Content/assets/img/testimonial/testi_1_2.jpg" alt="Avater">
+                        </div>
+                        <div class="testi-card_info">
+                            <h3 class="testi-card_name">Santino Pedro</h3>
+                            <span class="testi-card_desig">Bank Manager</span>
+                        </div>
+                    </div>
+                    <div class="testi-card_icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="testi-card">
+                    <p class="testi-card_text">“Troactively synthesize schemas before foster like leveraged expertise user friendly business low before open source before.”</p>
+                    <div class="testi-card_profile">
+                        <div class="testi-card_img">
+                            <img src="~/Content/assets/img/testimonial/testi_1_3.jpg" alt="Avater">
+                        </div>
+                        <div class="testi-card_info">
+                            <h3 class="testi-card_name">Marcos Manuel</h3>
+                            <span class="testi-card_desig">CEO Founder</span>
+                        </div>
+                    </div>
+                    <div class="testi-card_icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="testi-card">
+                    <p class="testi-card_text">“Jroactively synthesize schemas before foster like leveraged expertise user friendly business low before open source schemas.”</p>
+                    <div class="testi-card_profile">
+                        <div class="testi-card_img">
+                            <img src="~/Content/assets/img/testimonial/testi_1_4.jpg" alt="Avater">
+                        </div>
+                        <div class="testi-card_info">
+                            <h3 class="testi-card_name">David Marlo</h3>
+                            <span class="testi-card_desig">Bank Manager</span>
+                        </div>
+                    </div>
+                    <div class="testi-card_icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-title space position-relative"><div class="as-video cta-bg-shape"><img width="623" height="525" src="~/Content/assets/img/bg/cta_bg_2.jpg" alt="cta bg"> <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video"><i class="fas fa-play"></i></a></div><div class="cta-wrap container"><h2 class="sec-title mb-35 text-white">High <span class="fw-light text-theme">comfort</span><br>for your <span class="fw-light">family</span></h2><div class="info-card mb-40"><div class="info-card_icon text-title"><i class="fas fa-phone"></i></div><div class="info-card_content"><p class="info-card_text text-white">Call Us 24/7 Anytime:</p><a href="tel:+2563153215" class="info-card_link">+256 315 3215</a></div></div><a href="/Contact" class="as-btn style3 style-skew"><span class="btn-text">Contact Us</span></a></div></div>
+
+
+
+<div class="position-relative space">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6 mb-40 mb-lg-0">
+                <div class="title-area mb-35 text-center text-lg-start">
+                    <span class="sub-title">About our Company</span>
+                    <h2 class="sec-title text-capitalize">Our Easy Booking Form <br>To Get Best Vehicle </h2>
+                </div>
+                <div class="about-quote mb-40">
+                    <p class="text">Interactively maintain holistic best practices and user fully researched commerce installed base internal</p>
+                    <cite class="name">David Smith</cite>
+                    <span class="desig">Head Of Idea</span>
+                </div>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <div class="info-card">
+                        <div class="info-card_icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-card_content">
+                            <p class="info-card_text">Call for book an order:</p>
+                            <a href="tel:+2563153215" class="info-card_link">+256 315 3215</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 ps-3 ps-xl-5">
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "bookingForm" }))
+                {
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            @Html.TextBoxFor(model => model.bookingPhone, new { @class = "form-control", @PlaceHolder = "Phone Number", @id = "phone", @type = "text" })
+                            <span class="text-danger" id="phoneError"></span>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            @Html.TextBoxFor(model => model.bookingLocation, new { @class = "form-control", @PlaceHolder = "Enter Location", @id = "location", @type = "text" })
+                            <span class="text-danger" id="locationError"></span>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            @Html.TextBoxFor(model => model.bookingDate, new { @class = "date-pick form-control", @PlaceHolder = "Select Date", @id = "date-pick", @type = "text" })
+                            <span class="text-danger" id="dateError"></span>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            @Html.TextBoxFor(model => model.bookingTime, new { @class = "time-pick form-control", @PlaceHolder = "Select Time", @id = "time-pick", @type = "text" })
+                            <span class="text-danger" id="timeError"></span>
+                        </div>
+                        <div class="form-group col-12">
+                            @Html.DropDownListFor(e => e.bookingVehicalClass, new List<SelectListItem>{
+                                 new SelectListItem { Text="Normal Car",Value="Normal Car"},
+                                 new SelectListItem { Text="Business Class",Value="Business Class"},
+                                 new SelectListItem { Text="VIP Service",Value="VIP Service"}
+                             }, "--Select Vehicle Class--", new { @class = "form-control" })
+                            <span class="text-danger" id="vehicleClassError"></span>
+                        </div>
+                        <div class="form-group col-12">
+                            @Html.TextBoxFor(model => model.noofpassenger, new { @class = "form-control", @PlaceHolder = "No Of Passengers", @id = "passenger", @type = "text" })
+                            <span class="text-danger" id="passengerError"></span>
+                        </div>
+                        <div class="form-btn col-12"><button class="as-btn" id="submit" name="submit" type="submit">Book Your Vehicle</button></div>
+                    </div>
+                }
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="body-shape1">
+        <img src="~/Content/assets/img/normal/body_shape_1.png" alt="car">
+    </div>
+</div>
+
+
+<section class="space position-relative shape-mockup-wrap carpadding">
+    <div class="sec-shape2 movingX"><img class="girlimage" src="~/Content/assets/img/shape/ladies_bag.png" alt="shapes"></div>
+</section>
+
+<div class="bg-smoke space" id="faq-sec">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-5 col-lg-9">
+                <div class="title-area mb-35 text-center text-xl-start">
+                    <span class="sub-title">FAQ’s</span>
+                    <h2 class="sec-title text-capitalize">Frequently Asked <br>Questions </h2>
+                </div>
+                <div class="accordion-area accordion" id="faqAccordion">
+                    <div class="accordion-card style2">
+                        <div class="accordion-header" id="collapse-item-1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">How to select a Cab?</button>
+                        </div>
+                        <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion" style="">
+                            <div class="accordion-body">
+                                <p class="faq-text">Dynamically exploit worldwide technology via cooperative products. Energistically synthesize cutting-edge bandwidth before interoperable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-card style2 active">
+                        <div class="accordion-header" id="collapse-item-2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">How to Download taxi app?</button>
+                        </div>
+                        <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion" style="">
+                            <div class="accordion-body">
+                                <p class="faq-text">Dynamically exploit worldwide technology via cooperative products. Energistically synthesize cutting-edge bandwidth before interoperable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-card style2">
+                        <div class="accordion-header" id="collapse-item-3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">How to hire a Driver?</button>
+                        </div>
+                        <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion" style="">
+                            <div class="accordion-body">
+                                <p class="faq-text">Dynamically exploit worldwide technology via cooperative products. Energistically synthesize cutting-edge bandwidth before interoperable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7 mt-35 mt-xl-0">
+                <div class="ms-xxl-5">
+                    <div class="as-video">
+                        <img class="w-100" src="/Content/assets/img/Tour/index5.jpg" alt="Faq">
+                        <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="space-bottom myclass">
+    <div class="container">
+        <div class="row brand-slide as-carousel slick-initialized slick-slider" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="2">
+            <div class="slick-list draggable">
+                <div class="slick-track" style="opacity: 1; width: 1170px; transform: translate3d(0px, 0px, 0px);">
+                    <div class="col-auto brand-img slick-slide slick-current slick-active" style="width: 234px;" data-slick-index="0" aria-hidden="false" tabindex="0">
+                        <img src="/Content/assets/img/brand/brand_1_1.png" alt="Brand Logo">
+                    </div><div class="col-auto brand-img slick-slide slick-active" style="width: 234px;" data-slick-index="1" aria-hidden="false" tabindex="0">
+                        <img src="/Content/assets/img/brand/brand_1_2.png" alt="Brand Logo">
+                    </div><div class="col-auto brand-img slick-slide slick-active" style="width: 234px;" data-slick-index="2" aria-hidden="false" tabindex="0">
+                        <img src="/Content/assets/img/brand/brand_1_3.png" alt="Brand Logo">
+                    </div><div class="col-auto brand-img slick-slide slick-active" style="width: 234px;" data-slick-index="3" aria-hidden="false" tabindex="0">
+                        <img src="/Content/assets/img/brand/brand_1_4.png" alt="Brand Logo">
+                    </div><div class="col-auto brand-img slick-slide slick-active" style="width: 234px;" data-slick-index="4" aria-hidden="false" tabindex="0">
+                        <img src="/Content/assets/img/brand/brand_1_5.png" alt="Brand Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="space position-relative shape-mockup-wrap carpadding">
+    <div class="sec-shape2 movingX"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQggW3cTXYzp0-WD9Tmpsf6XMDcKZqvtVARWA&usqp=CAU" alt="shapes"></div>
+</section>
+
+
+
+
+<div class="sec-border1 background-image" style=" position:relative; background-image: url(&quot;/Content/assets/img/shape/border_1.png&quot;);"></div>
+
+<div class="bg-black1">
+    <div class="container">
+
+        <div class="contact-info-wrap">
+            <div class="info-card style3">
+                <div class="info-card_icon"><i class="fal fa-envelope"></i></div>
+                <div class="info-card_content">
+                    <p class="info-card_text">Email Address</p>
+                    <a href="mailto:info@example.com" class="info-card_link">info@example.com</a>
+                </div>
+            </div>
+            <div class="info-card style3">
+                <div class="info-card_icon"><i class="fal fa-phone"></i></div>
+                <div class="info-card_content">
+                    <p class="info-card_text">Phone Number</p>
+                    <a href="tel:+46825476243" class="info-card_link">(+468) 254 76243</a>
+                </div>
+            </div>
+            <div class="info-card style3">
+                <div class="info-card_icon"><i class="fal fa-location-dot"></i></div>
+                <div class="info-card_content">
+                    <p class="info-card_text">Our Adress</p>
+                    <a href="https://www.google.com/maps" class="info-card_link">259 Helano Road, USA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

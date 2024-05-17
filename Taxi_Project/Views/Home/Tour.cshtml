@@ -1,0 +1,179 @@
+﻿@model List<Taxi_Project.Models.tbl_tourPackage>
+
+
+
+@{
+    ViewBag.Title = "Tour";
+}
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="~/Content/assets/css/Tour.css" rel="stylesheet" />
+<link href="http://themes.pixelstrap.com/rica/assets/fonts/fa-brands-400.woff2">
+<link href="http://themes.pixelstrap.com/rica/assets/fonts/fa-regular-400.woff2" />
+<link href="http://themes.pixelstrap.com/rica/assets/fonts/fa-solid-900.woff2" />
+
+
+
+<style>
+
+
+    a {
+        text-decoration: none;
+    }
+
+    .special-section.grid-box .special-box {
+        border-radius: 18px;
+    }
+
+    .special-section .special-box .special-img {
+        border-radius: 10px;
+    }
+
+
+    .pactext {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .breadcrumb-section {
+        height: 155px;
+    }
+
+        .breadcrumb-section .breadcrumb-content {
+            height: 154px;
+            background-color: black;
+            opacity: 0.5;
+        }
+
+
+
+            .breadcrumb-section .breadcrumb-content.overlay-black > div {
+                background-color: transparent;
+            }
+
+    .hov:hover {
+        color: red !important;
+    }
+
+    .btn {
+        padding: 10px;
+        border-radius: 17px;
+        font-size: 13px;
+    }
+
+    .grid-box {
+        box-shadow: 0 0 40px 10px rgb(0 0 0 / 5%) !important;
+    }
+
+    .card-header .btn-link {
+        padding: 0.5rem 1rem;
+    }
+</style>
+
+<section class="breadcrumb-section parallax-img pt-0 bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/car1.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block; height: 155px;">
+    <img src="~/Content/assets/Custom/Tour/car1.jpg" class="bg-img img-fluid blur-up lazyloaded" alt="" style="display: none;">
+    <div class="breadcrumb-content overlay-black">
+        <div style="z-index:10000;">
+            <h2 style="color:white;">holiday package</h2>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="small-section bg-inner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="filter-panel">
+                    <div class="left-filter">
+
+                    </div>
+
+
+
+                </div>
+            </div>
+            <br /><br />
+            <div class="col-lg-12 ratio3_2">
+                <div class="product-wrapper-grid special-section grid-box">
+                    <div class="row  content grid" style="position: relative; height: 1369.28px;">
+
+
+
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item popular">
+                                <div class="special-box p-0">
+                                    <div class="special-imgg">
+                                        <a href="@Url.Action("TourDetails", "Home", new { id = item.ID, imageUrl = HttpUtility.UrlEncode(item.PackageImage) })" class="bg-size blur-up lazyloaded">
+                                            <img src="@item.PackageImage" class="img-fluid blur-up lazyload bg-img" alt="Package Image">
+                                        </a>
+                                    </div>
+                                    <div class="special-content">
+                                        <div class="pactext">
+                                            <div>
+                                                <i class="fa-regular fa-clock" style="color:red;"></i>&nbsp;<span style="color:#b3a7a7;font-size:15px;">@item.Duration</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="@Url.Action("TourDetails", "Home", new { id = item.ID, imageUrl = HttpUtility.UrlEncode(item.PackageImage) })">
+                                                <h5 class="hov">@item.PackageTitle</h5>
+                                            </a>
+                                        </div>
+                                        <p><i class="fa-regular fa-location-dot" style="color:red;"></i>&nbsp;<span>@item.Location</span></p>
+                                        <a href="@Url.Action("TourDetails", "Home", new { id = item.ID, imageUrl = HttpUtility.UrlEncode(item.PackageImage) })" class="btn as-btn btn-sm d-block">View Details&nbsp;<i class="fas fa-arrow-up-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $('.grid').isotope({
+            itemSelector: '.grid-item',
+        });
+
+        // filter items on button click
+        $('.filter-button-group').on('click', 'li', function () {
+            var filterValue = $(this).attr('data-filter');
+            $('.grid').isotope({ filter: filterValue });
+            $('.filter-button-group li').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+
+
+
+
+    $(this).find('button').first().attr({
+        'role': 'tab',
+        'id': 'slick-slide-control' + _.instanceUid + i,
+        'aria-controls': 'slick-slide' + _.instanceUid + mappedSlideIndex,
+        'aria-label': (i + 1) + ' of ' + numDotGroups,
+        'aria-selected': null,
+        'tabindex': '-1'
+    });
+
+
+
+</script>

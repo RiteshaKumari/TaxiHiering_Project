@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1EFE58A-EC2D-42DB-BD75-AFEAC962EF8F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Taxi_Project</RootNamespace>
+    <AssemblyName>Taxi_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44377</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_BookingTour.cs" />
+    <Compile Include="Models\tbl_BookingVehicle.cs" />
+    <Compile Include="Models\tbl_Contact.cs" />
+    <Compile Include="Models\tbl_gallery.cs" />
+    <Compile Include="Models\tbl_TourDetail.cs" />
+    <Compile Include="Models\tbl_tourPackage.cs" />
+    <Compile Include="Models\UserDBContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\css\app.min.css" />
+    <Content Include="Content\assets\css\fontawesome.min.css" />
+    <Content Include="Content\assets\css\style.css" />
+    <Content Include="Content\assets\css\Tour.css" />
+    <Content Include="Content\assets\Custom\custom.css" />
+    <Content Include="Content\assets\Custom\custom.img\image_downloader_1679115373216-removebg-preview %281%29.png" />
+    <Content Include="Content\assets\Custom\custom.img\Taxi_Horizontal_Logo.png" />
+    <Content Include="Content\assets\Custom\Tour\about-img1.png" />
+    <Content Include="Content\assets\Custom\Tour\barun-ghosh-_LQIrzz_75k-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\breadcrumb1.jpg" />
+    <Content Include="Content\assets\Custom\Tour\car1.jpg" />
+    <Content Include="Content\assets\Custom\Tour\car2.jpg" />
+    <Content Include="Content\assets\Custom\Tour\car3.jpg" />
+    <Content Include="Content\assets\Custom\Tour\car4.jpg" />
+    <Content Include="Content\assets\Custom\Tour\car5.jpg" />
+    <Content Include="Content\assets\Custom\Tour\car6.jpg" />
+    <Content Include="Content\assets\Custom\Tour\car7.jpg" />
+    <Content Include="Content\assets\Custom\Tour\car8.jpg" />
+    <Content Include="Content\assets\Custom\Tour\car9.jpg" />
+    <Content Include="Content\assets\Custom\Tour\close.png" />
+    <Content Include="Content\assets\Custom\Tour\deepak-kosta-QdMV6KeTjyc-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\dest1.jpg" />
+    <Content Include="Content\assets\Custom\Tour\DM_20230424181514_001.jpg" />
+    <Content Include="Content\assets\Custom\Tour\DM_20230424181516_001.jpg" />
+    <Content Include="Content\assets\Custom\Tour\DM_20230424181520_001.jpg" />
+    <Content Include="Content\assets\Custom\Tour\DM_20230424181521_001.jpg" />
+    <Content Include="Content\assets\Custom\Tour\DM_20230424181523_001.jpg" />
+    <Content Include="Content\assets\Custom\Tour\DM_20230424181524_001.jpg" />
+    <Content Include="Content\assets\Custom\Tour\index1.jpg" />
+    <Content Include="Content\assets\Custom\Tour\index2.jpg" />
+    <Content Include="Content\assets\Custom\Tour\index3.jpg" />
+    <Content Include="Content\assets\Custom\Tour\index4.jpg" />
+    <Content Include="Content\assets\Custom\Tour\index5.jpg" />
+    <Content Include="Content\assets\Custom\Tour\julian-yu-_WuPjE-MPHo-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\junaid-ahmad-ansari-9WP-NVh2d6U-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\laurentiu-morariu-8XZTZIfuNrM-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\loading.gif" />
+    <Content Include="Content\assets\Custom\Tour\maaz-ahmed-uO5hTj1CGPg-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\martin-jernberg-nE2gf1scItI-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\matthew-tenbruggencate-zlH-ffSPQxU-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\next.png" />
+    <Content Include="Content\assets\Custom\Tour\pexels-ankur-bagai-3327777.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-anuj-yadav-8207636.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-apostrophy-studio-1098460.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-fuzail-ahmad-2261678.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-fuzail-ahmad-2792601.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-harshit-nandu-14388684.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-i-m-aarya-14907353.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-jeswin-thomas-1007426.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-jeswin-thomas-1007427.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-rabi-debbarma-4119592.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-shalender-kumar-3672388.jpg" />
+    <Content Include="Content\assets\Custom\Tour\pexels-vivek-sakhargade-11727521.jpg" />
+    <Content Include="Content\assets\Custom\Tour\photo-1536846511313-4b07b637bff9.jpg" />
+    <Content Include="Content\assets\Custom\Tour\photo-1630717285906-29364ffacea0.jpg" />
+    <Content Include="Content\assets\Custom\Tour\premium_photo-1658506638425-25dc93218082.jpg" />
+    <Content Include="Content\assets\Custom\Tour\prev.png" />
+    <Content Include="Content\assets\Custom\Tour\raghu-nayyar-EpAq2EE-shg-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\sergio-capuzzimati-LLK0mYl-lu0-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\service1.png" />
+    <Content Include="Content\assets\Custom\Tour\service2.png" />
+    <Content Include="Content\assets\Custom\Tour\service3.png" />
+    <Content Include="Content\assets\Custom\Tour\service4.png" />
+    <Content Include="Content\assets\Custom\Tour\shalender-kumar-XjKaPInYVCM-unsplash.jpg" />
+    <Content Include="Content\assets\Custom\Tour\spain.jpg" />
+    <Content Include="Content\assets\Custom\Tour\tarun-anand-giri-CMhbSyGl1Fs-unsplash %281%29.jpg" />
+    <Content Include="Content\assets\Custom\Tour\yc-liao-h7dME0y6qBY-unsplash.jpg" />
+    <Content Include="Content\assets\img\bg\cta_bg_1.jpg" />
+    <Content Include="Content\assets\img\bg\cta_bg_2.jpg" />
+    <Content Include="Content\assets\img\bg\cta_bg_3.jpg" />
+    <Content Include="Content\assets\img\bg\download_bg_1.jpg" />
+    <Content Include="Content\assets\img\bg\download_bg_2.jpg" />
+    <Content Include="Content\assets\img\bg\header_bg_1.png" />
+    <Content Include="Content\assets\img\bg\hero-shape-1.png" />
+    <Content Include="Content\assets\img\bg\hero-shape-2.png" />
+    <Content Include="Content\assets\img\bg\hero-shape-3.png" />
+    <Content Include="Content\assets\img\bg\hero-shape-4.png" />
+    <Content Include="Content\assets\img\bg\hero-shape-5.png" />
+    <Content Include="Content\assets\img\bg\hero_bg_1_1.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_1_2.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_1_3.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_2_1.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_2_2.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_2_3.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_3_1.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_3_2.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_3_3.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_4_1.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_4_2.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_4_3.jpg" />
+    <Content Include="Content\assets\img\bg\hero_bg_6_1.jpg" />
+    <Content Include="Content\assets\img\bg\hero_img-6.png" />
+    <Content Include="Content\assets\img\bg\hero_overlay_1.png" />
+    <Content Include="Content\assets\img\bg\hero_overlay_2.png" />
+    <Content Include="Content\assets\img\bg\hero_overlay_3.png" />
+    <Content Include="Content\assets\img\bg\hero_overlay_4.png" />
+    <Content Include="Content\assets\img\bg\pattern_bg_1.png" />
+    <Content Include="Content\assets\img\bg\pattern_bg_2.png" />
+    <Content Include="Content\assets\img\bg\pattern_bg_3.png" />
+    <Content Include="Content\assets\img\bg\pattern_bg_4.png" />
+    <Content Include="Content\assets\img\bg\pattern_bg_5.jpg" />
+    <Content Include="Content\assets\img\bg\price-box-bg.jpg" />
+    <Content Include="Content\assets\img\bg\process_bg_1.jpg" />
+    <Content Include="Content\assets\img\bg\service_bg_1.jpg" />
+    <Content Include="Content\assets\img\bg\service_bg_1_1.jpg" />
+    <Content Include="Content\assets\img\bg\taxi_bg_1.jpg" />
+    <Content Include="Content\assets\img\bg\testimonial_bg_1.jpg" />
+    <Content Include="Content\assets\img\bg\testi_bg_1.jpg" />
+    <Content Include="Content\assets\img\blog\blog-author.jpg" />
+    <Content Include="Content\assets\img\blog\blog-nav-1.jpg" />
+    <Content Include="Content\assets\img\blog\blog-nav-2.jpg" />
+    <Content Include="Content\assets\img\blog\blog-s-1-1.jpg" />
+    <Content Include="Content\assets\img\blog\blog-s-1-2.jpg" />
+    <Content Include="Content\assets\img\blog\blog-s-1-3.jpg" />
+    <Content Include="Content\assets\img\blog\blog-s-1-4.jpg" />
+    <Content Include="Content\assets\img\blog\blog-s-1-5.jpg" />
+    <Content Include="Content\assets\img\blog\blog_1_1.jpg" />
+    <Content Include="Content\assets\img\blog\blog_1_2.jpg" />
+    <Content Include="Content\assets\img\blog\blog_1_3.jpg" />
+    <Content Include="Content\assets\img\blog\blog_1_4.jpg" />
+    <Content Include="Content\assets\img\blog\blog_2_1.jpg" />
+    <Content Include="Content\assets\img\blog\blog_2_2.jpg" />
+    <Content Include="Content\assets\img\blog\blog_2_3.jpg" />
+    <Content Include="Content\assets\img\blog\blog_3_1.jpg" />
+    <Content Include="Content\assets\img\blog\blog_3_2.jpg" />
+    <Content Include="Content\assets\img\blog\blog_3_3.jpg" />
+    <Content Include="Content\assets\img\blog\blog_inner_1.jpg" />
+    <Content Include="Content\assets\img\blog\blog_inner_2.jpg" />
+    <Content Include="Content\assets\img\blog\comment-author-1.jpg" />
+    <Content Include="Content\assets\img\blog\comment-author-2.jpg" />
+    <Content Include="Content\assets\img\blog\comment-author-3.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-1-1.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-1-2.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-1-3.jpg" />
+    <Content Include="Content\assets\img\brand\brand_1_1.png" />
+    <Content Include="Content\assets\img\brand\brand_1_2.png" />
+    <Content Include="Content\assets\img\brand\brand_1_3.png" />
+    <Content Include="Content\assets\img\brand\brand_1_4.png" />
+    <Content Include="Content\assets\img\brand\brand_1_5.png" />
+    <Content Include="Content\assets\img\favicons\android-icon-192x192.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-114x114.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-120x120.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-144x144.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-152x152.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-180x180.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-57x57.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-60x60.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-72x72.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-76x76.png" />
+    <Content Include="Content\assets\img\favicons\favicon-16x16.png" />
+    <Content Include="Content\assets\img\favicons\favicon-32x32.png" />
+    <Content Include="Content\assets\img\favicons\favicon-96x96.png" />
+    <Content Include="Content\assets\img\favicons\ms-icon-144x144.png" />
+    <Content Include="Content\assets\img\icon\about-feature_1.svg" />
+    <Content Include="Content\assets\img\icon\about-feature_2.svg" />
+    <Content Include="Content\assets\img\icon\counter_1_1.svg" />
+    <Content Include="Content\assets\img\icon\counter_1_2.svg" />
+    <Content Include="Content\assets\img\icon\counter_1_3.svg" />
+    <Content Include="Content\assets\img\icon\counter_1_4.svg" />
+    <Content Include="Content\assets\img\icon\feature_1.svg" />
+    <Content Include="Content\assets\img\icon\feature_2.svg" />
+    <Content Include="Content\assets\img\icon\feature_2_1.svg" />
+    <Content Include="Content\assets\img\icon\feature_2_2.svg" />
+    <Content Include="Content\assets\img\icon\feature_2_3.svg" />
+    <Content Include="Content\assets\img\icon\feature_3.svg" />
+    <Content Include="Content\assets\img\icon\feature_4.svg" />
+    <Content Include="Content\assets\img\icon\quotes_1.svg" />
+    <Content Include="Content\assets\img\icon\quote_right_1.png" />
+    <Content Include="Content\assets\img\icon\rate_1.svg" />
+    <Content Include="Content\assets\img\icon\rate_2.svg" />
+    <Content Include="Content\assets\img\icon\service_feature_1_1.svg" />
+    <Content Include="Content\assets\img\icon\service_feature_1_2.svg" />
+    <Content Include="Content\assets\img\icon\service_feature_1_3.svg" />
+    <Content Include="Content\assets\img\icon\service_feature_1_4.svg" />
+    <Content Include="Content\assets\img\icon\service_list_1.svg" />
+    <Content Include="Content\assets\img\icon\service_list_1_1.svg" />
+    <Content Include="Content\assets\img\icon\service_list_1_2.svg" />
+    <Content Include="Content\assets\img\icon\service_list_1_3.svg" />
+    <Content Include="Content\assets\img\icon\service_list_1_4.svg" />
+    <Content Include="Content\assets\img\icon\service_list_2.svg" />
+    <Content Include="Content\assets\img\icon\service_list_3.svg" />
+    <Content Include="Content\assets\img\icon\service_list_4.svg" />
+    <Content Include="Content\assets\img\icon\taxi_f_1_1.svg" />
+    <Content Include="Content\assets\img\icon\taxi_f_1_2.svg" />
+    <Content Include="Content\assets\img\icon\taxi_f_1_3.svg" />
+    <Content Include="Content\assets\img\icon\taxi_f_1_4.svg" />
+    <Content Include="Content\assets\img\icon\taxi_f_1_5.svg" />
+    <Content Include="Content\assets\img\icon\taxi_f_1_6.svg" />
+    <Content Include="Content\assets\img\logo-white.svg" />
+    <Content Include="Content\assets\img\logo-white2.svg" />
+    <Content Include="Content\assets\img\logo.svg" />
+    <Content Include="Content\assets\img\logo2.svg" />
+    <Content Include="Content\assets\img\normal\about_1_1.jpg" />
+    <Content Include="Content\assets\img\normal\about_1_2.jpg" />
+    <Content Include="Content\assets\img\normal\about_2_1.jpg" />
+    <Content Include="Content\assets\img\normal\about_2_2.jpg" />
+    <Content Include="Content\assets\img\normal\about_3_1.jpg" />
+    <Content Include="Content\assets\img\normal\about_3_2.jpg" />
+    <Content Include="Content\assets\img\normal\about_3_3.jpg" />
+    <Content Include="Content\assets\img\normal\about_4_1.jpg" />
+    <Content Include="Content\assets\img\normal\about_4_2.jpg" />
+    <Content Include="Content\assets\img\normal\about_5_1.png" />
+    <Content Include="Content\assets\img\normal\about_6_1.jpg" />
+    <Content Include="Content\assets\img\normal\about_6_2.jpg" />
+    <Content Include="Content\assets\img\normal\about_avater.jpg" />
+    <Content Include="Content\assets\img\normal\app_mockup.png" />
+    <Content Include="Content\assets\img\normal\body_shape_1.png" />
+    <Content Include="Content\assets\img\normal\booking_car_1.png" />
+    <Content Include="Content\assets\img\normal\call_man.jpg" />
+    <Content Include="Content\assets\img\normal\contact_1_1.jpg" />
+    <Content Include="Content\assets\img\normal\contact_1_2.jpg" />
+    <Content Include="Content\assets\img\normal\contact_1_3.jpg" />
+    <Content Include="Content\assets\img\normal\contact_1_4.jpg" />
+    <Content Include="Content\assets\img\normal\contact_1_5.jpg" />
+    <Content Include="Content\assets\img\normal\contact_1_6.jpg" />
+    <Content Include="Content\assets\img\normal\contact_1_7.jpg" />
+    <Content Include="Content\assets\img\normal\contact_1_8.jpg" />
+    <Content Include="Content\assets\img\normal\contact_1_9.jpg" />
+    <Content Include="Content\assets\img\normal\faq_1_1.jpg" />
+    <Content Include="Content\assets\img\normal\faq_1_2.jpg" />
+    <Content Include="Content\assets\img\normal\faq_1_3.jpg" />
+    <Content Include="Content\assets\img\normal\faq_1_4.jpg" />
+    <Content Include="Content\assets\img\normal\faq_1_5.jpg" />
+    <Content Include="Content\assets\img\normal\faq_1_6.jpg" />
+    <Content Include="Content\assets\img\normal\faq_1_7.jpg" />
+    <Content Include="Content\assets\img\normal\faq_2.jpg" />
+    <Content Include="Content\assets\img\normal\feature_1_1.jpg" />
+    <Content Include="Content\assets\img\normal\feature_1_2.jpg" />
+    <Content Include="Content\assets\img\normal\feature_1_3.jpg" />
+    <Content Include="Content\assets\img\service\service-4-1.jpg" />
+    <Content Include="Content\assets\img\service\service-4-2.jpg" />
+    <Content Include="Content\assets\img\service\service-4-3.jpg" />
+    <Content Include="Content\assets\img\service\service-4-4.jpg" />
+    <Content Include="Content\assets\img\service\service_1_1.jpg" />
+    <Content Include="Content\assets\img\service\service_1_2.jpg" />
+    <Content Include="Content\assets\img\service\service_1_3.jpg" />
+    <Content Include="Content\assets\img\service\service_1_4.jpg" />
+    <Content Include="Content\assets\img\service\service_2_1.jpg" />
+    <Content Include="Content\assets\img\service\service_2_2.jpg" />
+    <Content Include="Content\assets\img\service\service_2_3.jpg" />
+    <Content Include="Content\assets\img\service\service_2_4.jpg" />
+    <Content Include="Content\assets\img\service\service_3_1.jpg" />
+    <Content Include="Content\assets\img\service\service_3_2.jpg" />
+    <Content Include="Content\assets\img\service\service_3_3.jpg" />
+    <Content Include="Content\assets\img\service\service_3_4.jpg" />
+    <Content Include="Content\assets\img\service\service_3_5.jpg" />
+    <Content Include="Content\assets\img\service\service_3_6.jpg" />
+    <Content Include="Content\assets\img\service\service_details_1.jpg" />
+    <Content Include="Content\assets\img\service\service_inner_1.jpg" />
+    <Content Include="Content\assets\img\service\service_list_1.jpg" />
+    <Content Include="Content\assets\img\service\service_list_2.jpg" />
+    <Content Include="Content\assets\img\service\service_list_3.jpg" />
+    <Content Include="Content\assets\img\service\service_list_4.jpg" />
+    <Content Include="Content\assets\img\shape\border_1.png" />
+    <Content Include="Content\assets\img\shape\ladies_bag.png" />
+    <Content Include="Content\assets\img\shape\line_1.png" />
+    <Content Include="Content\assets\img\shape\line_2.png" />
+    <Content Include="Content\assets\img\shape\process_line_1.png" />
+    <Content Include="Content\assets\img\shape\shape_bg_1.svg" />
+    <Content Include="Content\assets\img\shape\taxi_1.png" />
+    <Content Include="Content\assets\img\shape\taxi_2.png" />
+    <Content Include="Content\assets\img\shape\taxi_3.png" />
+    <Content Include="Content\assets\img\shape\taxi_4.png" />
+    <Content Include="Content\assets\img\taxi\taxi_1_1.png" />
+    <Content Include="Content\assets\img\taxi\taxi_1_2.png" />
+    <Content Include="Content\assets\img\taxi\taxi_1_3.png" />
+    <Content Include="Content\assets\img\taxi\taxi_1_4.png" />
+    <Content Include="Content\assets\img\taxi\taxi_1_5.png" />
+    <Content Include="Content\assets\img\taxi\taxi_2_1.png" />
+    <Content Include="Content\assets\img\taxi\taxi_2_2.png" />
+    <Content Include="Content\assets\img\taxi\taxi_2_3.png" />
+    <Content Include="Content\assets\img\taxi\taxi_3_1.png" />
+    <Content Include="Content\assets\img\taxi\taxi_3_2.png" />
+    <Content Include="Content\assets\img\taxi\taxi_3_3.png" />
+    <Content Include="Content\assets\img\taxi\taxi_3_4.png" />
+    <Content Include="Content\assets\img\taxi\taxi_4_1.png" />
+    <Content Include="Content\assets\img\taxi\taxi_4_2.png" />
+    <Content Include="Content\assets\img\taxi\taxi_4_3.png" />
+    <Content Include="Content\assets\img\taxi\taxi_4_4.png" />
+    <Content Include="Content\assets\img\taxi\taxi_4_5.png" />
+    <Content Include="Content\assets\img\taxi\taxi_4_6.png" />
+    <Content Include="Content\assets\img\taxi\taxi_details.png" />
+    <Content Include="Content\assets\img\team\team_1_1.jpg" />
+    <Content Include="Content\assets\img\team\team_1_2.jpg" />
+    <Content Include="Content\assets\img\team\team_1_3.jpg" />
+    <Content Include="Content\assets\img\team\team_1_4.jpg" />
+    <Content Include="Content\assets\img\team\team_2_1.jpg" />
+    <Content Include="Content\assets\img\team\team_2_2.jpg" />
+    <Content Include="Content\assets\img\team\team_2_3.jpg" />
+    <Content Include="Content\assets\img\team\team_2_4.jpg" />
+    <Content Include="Content\assets\img\team\team_2_5.jpg" />
+    <Content Include="Content\assets\img\team\team_2_6.jpg" />
+    <Content Include="Content\assets\img\team\team_3_1.jpg" />
+    <Content Include="Content\assets\img\team\team_3_2.jpg" />
+    <Content Include="Content\assets\img\team\team_3_3.jpg" />
+    <Content Include="Content\assets\img\team\team_3_4.jpg" />
+    <Content Include="Content\assets\img\team\team_3_5.jpg" />
+    <Content Include="Content\assets\img\team\team_details_1.jpg" />
+    <Content Include="Content\assets\img\team\team_featured.jpg" />
+    <Content Include="Content\assets\img\testimonial\avater_1.jpg" />
+    <Content Include="Content\assets\img\testimonial\avater_2.jpg" />
+    <Content Include="Content\assets\img\testimonial\avater_3.jpg" />
+    <Content Include="Content\assets\img\testimonial\taxi.png" />
+    <Content Include="Content\assets\img\testimonial\testi_1_1.jpg" />
+    <Content Include="Content\assets\img\testimonial\testi_1_2.jpg" />
+    <Content Include="Content\assets\img\testimonial\testi_1_3.jpg" />
+    <Content Include="Content\assets\img\testimonial\testi_1_4.jpg" />
+    <Content Include="Content\assets\img\testimonial\testi_2_1.jpg" />
+    <Content Include="Content\assets\img\testimonial\testi_2_2.jpg" />
+    <Content Include="Content\assets\img\testimonial\testi_2_3.jpg" />
+    <Content Include="Content\assets\img\Tour\Akshardham Temple.jpg" />
+    <Content Include="Content\assets\img\Tour\AlbertHall7.jpg" />
+    <Content Include="Content\assets\img\Tour\AmerFort4.jpg" />
+    <Content Include="Content\assets\img\Tour\Bangla Sahib Gurudwara.jpg" />
+    <Content Include="Content\assets\img\Tour\barun-ghosh-_LQIrzz_75k-unsplash.jpg" />
+    <Content Include="Content\assets\img\Tour\breadcrumb1.jpg" />
+    <Content Include="Content\assets\img\Tour\car-focus.png" />
+    <Content Include="Content\assets\img\Tour\car1.jpg" />
+    <Content Include="Content\assets\img\Tour\car2.jpg" />
+    <Content Include="Content\assets\img\Tour\car3.jpg" />
+    <Content Include="Content\assets\img\Tour\car4.jpg" />
+    <Content Include="Content\assets\img\Tour\car5.jpg" />
+    <Content Include="Content\assets\img\Tour\car6.jpg" />
+    <Content Include="Content\assets\img\Tour\car7.jpg" />
+    <Content Include="Content\assets\img\Tour\car8.jpg" />
+    <Content Include="Content\assets\img\Tour\car9.jpg" />
+    <Content Include="Content\assets\img\Tour\CarScroll.png" />
+    <Content Include="Content\assets\img\Tour\CityPalace8.jpg" />
+    <Content Include="Content\assets\img\Tour\close.png" />
+    <Content Include="Content\assets\img\Tour\DargahSharif1.jpg" />
+    <Content Include="Content\assets\img\Tour\deepak-kosta-QdMV6KeTjyc-unsplash.jpg" />
+    <Content Include="Content\assets\img\Tour\DM_20230424181514_001.jpg" />
+    <Content Include="Content\assets\img\Tour\DM_20230424181516_001.jpg" />
+    <Content Include="Content\assets\img\Tour\DM_20230424181520_001.jpg" />
+    <Content Include="Content\assets\img\Tour\DM_20230424181521_001.jpg" />
+    <Content Include="Content\assets\img\Tour\DM_20230424181523_001.jpg" />
+    <Content Include="Content\assets\img\Tour\DM_20230424181524_001.jpg" />
+    <Content Include="Content\assets\img\Tour\DM_20230502232709_009.jpg" />
+    <Content Include="Content\assets\img\Tour\DotPlus.png" />
+    <Content Include="Content\assets\img\Tour\footer_bg.png" />
+    <Content Include="Content\assets\img\Tour\HawaMahal6.png" />
+    <Content Include="Content\assets\img\Tour\Humayuns Tomb.jpg" />
+    <Content Include="Content\assets\img\Tour\index1.jpg" />
+    <Content Include="Content\assets\img\Tour\index2.jpg" />
+    <Content Include="Content\assets\img\Tour\index3.jpg" />
+    <Content Include="Content\assets\img\Tour\index4.jpg" />
+    <Content Include="Content\assets\img\Tour\index5.jpg" />
+    <Content Include="Content\assets\img\Tour\India Gate.jpg" />
+    <Content Include="Content\assets\img\Tour\JaigarhFort11.jpg" />
+    <Content Include="Content\assets\img\Tour\JalMahal9.jpg" />
+    <Content Include="Content\assets\img\Tour\JantarMantar5.jpg" />
+    <Content Include="Content\assets\img\Tour\julian-yu-_WuPjE-MPHo-unsplash.jpg" />
+    <Content Include="Content\assets\img\Tour\junaid-ahmad-ansari-9WP-NVh2d6U-unsplash.jpg" />
+    <Content Include="Content\assets\img\Tour\laurentiu-morariu-8XZTZIfuNrM-unsplash.jpg" />
+    <Content Include="Content\assets\img\Tour\loading.gif" />
+    <Content Include="Content\assets\img\Tour\logo.png" />
+    <Content Include="Content\assets\img\Tour\Lotus Temple.jpg" />
+    <Content Include="Content\assets\img\Tour\maaz-ahmed-uO5hTj1CGPg-unsplash.jpg" />
+    <Content Include="Content\assets\img\Tour\martin-jernberg-nE2gf1scItI-unsplash.jpg" />
+    <Content Include="Content\assets\img\Tour\matthew-tenbruggencate-zlH-ffSPQxU-unsplash.jpg" />
+    <Content Include="Content\assets\img\Tour\NahargarhFort10.jpg" />
+    <Content Include="Content\assets\img\Tour\next.png" />
+    <Content Include="Content\assets\img\Tour\pexels-ankur-bagai-3327777.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-anuj-yadav-8207636.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-apostrophy-studio-1098460.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-fuzail-ahmad-2261678.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-fuzail-ahmad-2792601.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-harshit-nandu-14388684.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-i-m-aarya-14907353.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-jeswin-thomas-1007426.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-jeswin-thomas-1007427.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-rabi-debbarma-4119592.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-shalender-kumar-3672388.jpg" />
+    <Content Include="Content\assets\img\Tour\pexels-vivek-sakhargade-11727521.jpg" />
+    <Content Include="Content\assets\img\Tour\Pushkar2.jpg" />
+    <Content Include="Content\assets\img\Tour\Rashtrapati Bhawan.jpg" />
+    <Content Include="Content\assets\img\Tour\Red Fort.jpg" />
+    <Content Include="Content\assets\img\Tour\Taj Mahal.jpg" />
+    <Content Include="Content\assets\img\Tour\Taragarh3.jpg" />
+    <Content Include="Content\assets\img\Tour\volks.gif" />
+    <Content Include="Content\assets\img\widget\gal-1-1.jpg" />
+    <Content Include="Content\assets\img\widget\gal-1-2.jpg" />
+    <Content Include="Content\assets\img\widget\gal-1-3.jpg" />
+    <Content Include="Content\assets\img\widget\gal-1-4.jpg" />
+    <Content Include="Content\assets\img\widget\gal-1-5.jpg" />
+    <Content Include="Content\assets\img\widget\gal-1-6.jpg" />
+    <Content Include="Content\assets\js\app.min.js" />
+    <Content Include="Content\assets\js\main.js" />
+    <Content Include="Content\assets\js\particles-config.js" />
+    <Content Include="Content\assets\js\vendor\jquery-3.6.0.min.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-brands-400.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-brands-400.woff2" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-duotone-900.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-duotone-900.woff2" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-light-300.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-light-300.woff2" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-regular-400.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-regular-400.woff2" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-solid-900.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-solid-900.woff2" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-thin-100.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-thin-100.woff2" />
+    <Content Include="Content\assets\img\favicons\manifest.json" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Destination.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\OurFleet.cshtml" />
+    <Content Include="Views\Home\OurService.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\Tour.cshtml" />
+    <Content Include="Views\Home\TourDetails.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50602</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44377/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

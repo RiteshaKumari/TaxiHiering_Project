@@ -1,0 +1,628 @@
+﻿@{
+    ViewBag.Title = "Destination";
+}
+
+
+
+<link href="~/Content/assets/css/Tour.css" rel="stylesheet" />
+
+<style>
+
+
+
+    .elementor-section {
+        position: relative;
+    }
+
+        .elementor-section .elementor-container {
+            display: flex;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+        }
+
+
+    .elementor-column {
+        position: relative;
+        min-height: 1px;
+        display: flex;
+    }
+
+    .elementor-widget-container {
+        min-height: 1px;
+    }
+
+    .elementor-row {
+        width: 100%;
+        display: flex;
+    }
+
+    .elementor-element.elementor-element-ed28d14 .elementor-heading-title {
+        text-transform: capitalize;
+    }
+
+    .elementor-element.elementor-element-ac816fe .elementor-heading-title {
+        text-transform: capitalize;
+    }
+
+    .elementor-heading-title {
+        padding: 0;
+        margin: 0;
+        line-height: 1;
+    }
+
+
+    .elementor-element .elementor-widget-container {
+        transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+    }
+
+    .elementor-1118 .elementor-element.elementor-element-ed28d14 {
+        text-align: center;
+    }
+
+    .elementor-widget:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .elementor-element.elementor-element-4239426 {
+        text-align: center;
+    }
+
+    .elementor-column-wrap {
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+
+    .elementor-widget-wrap {
+        position: relative;
+        width: 100%;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .elementor-element.elementor-element-0c344cc .elementor-heading-title {
+        color: #EA5318;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    .elementor-element.elementor-element-62abe2a2 {
+        text-align: left;
+    }
+
+    .elementor-element.elementor-element-11c3c22a {
+        font-size: 15px;
+        line-height: 2em;
+    }
+
+    .elementor-element {
+        --widgets-spacing: 20px;
+    }
+
+
+    .elementor-clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+        width: 0;
+        height: 0
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: Poppins;
+        font-weight: 600;
+        letter-spacing: 0px;
+        line-height: 1.2em;
+        text-transform: none;
+        color: #0c3555;
+        clear: both;
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+
+
+    .elementor-element.elementor-element-0be5855 .elementor-heading-title {
+        text-transform: capitalize;
+    }
+
+    .elementor-element.elementor-element-62abe2a2 .elementor-heading-title {
+        color: #EA5318;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    .elementor-element.elementor-element-4a94d7c {
+        font-size: 15px;
+        line-height: 2em;
+    }
+
+
+
+
+
+    /* Extra small devices (phones, 600px and down) */
+    @@media only screen and (max-width: 600px) {
+        .elementor-element.elementor-element-11c3c22a,
+        .elementor-element.elementor-element-4a94d7c {
+            font-size: 12px;
+            text-align: justify;
+        }
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @@media only screen and (min-width: 768px) {
+        .elementor-container > :first-child {
+            order: 10;
+        }
+
+        .elementor-column.elementor-col-100,
+        .elementor-column[data-col="100"] {
+            width: 100%;
+        }
+
+        .elementor-column.elementor-col-50,
+        .elementor-column[data-col="50"] {
+            width: 50%;
+        }
+
+        .elementor-element.elementor-element-62abe2a2 .elementor-heading-title,
+        .elementor-element.elementor-element-0c344cc .elementor-heading-title {
+            margin: 20px auto;
+            font-size: 25px;
+        }
+
+        .elementor-element.elementor-element-11c3c22a,
+        .elementor-element.elementor-element-4a94d7c {
+            font-size: 16px;
+            text-align: justify;
+        }
+
+
+        .elementor-column-wrap {
+            padding: 16px;
+        }
+
+        .elementor-image img {
+            display: block;
+            margin: 77px auto;
+        }
+    }
+
+    @@media (max-width: 1024px) {
+        .elementor-section .elementor-container,
+        .elementor-row {
+            flex-wrap: wrap;
+        }
+
+        .elementor-widget-container {
+            margin: 0;
+        }
+
+        .elementor-element.elementor-element-0c344cc .elementor-heading-title,
+        .elementor-element.elementor-element-62abe2a2 .elementor-heading-title,
+        .elementor-element.elementor-element-ac816fe .elementor-heading-title {
+            margin: 20px auto;
+            font-size: 25px;
+        }
+
+        .elementor-element.elementor-element-11c3c22a,
+        .elementor-element.elementor-element-4a94d7c {
+            font-size: 16px;
+            text-align: justify;
+            margin: 30px auto;
+        }
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @@media only screen and (min-width: 992px) {
+        .elementor-container > :first-child {
+            order: 10;
+        }
+
+        .elementor-column.elementor-col-100,
+        .elementor-column[data-col="100"] {
+            width: 100%;
+        }
+
+        .elementor-column.elementor-col-50,
+        .elementor-column[data-col="50"] {
+            width: 50%;
+        }
+
+        .elementor-element.elementor-element-62abe2a2 .elementor-heading-title,
+        .elementor-element.elementor-element-0c344cc .elementor-heading-title {
+            margin: 20px auto;
+            font-size: 25px;
+        }
+
+        .elementor-element.elementor-element-11c3c22a,
+        .elementor-element.elementor-element-4a94d7c {
+            font-size: 16px;
+            text-align: justify;
+        }
+
+
+        .elementor-column-wrap {
+            padding: 15px;
+        }
+
+        .elementor-image img {
+            display: block;
+            margin: 77px auto;
+        }
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @@media only screen and (min-width: 1200px) {
+
+        .elementor-column.elementor-col-100,
+        .elementor-column[data-col="100"] {
+            width: 100%;
+        }
+
+        .elementor-column.elementor-col-50,
+        .elementor-column[data-col="50"] {
+            width: 50%;
+        }
+
+        .elementor-element.elementor-element-62abe2a2 .elementor-heading-title {
+            font-size: 16px;
+        }
+
+        .elementor-element.elementor-element-4a94d7c {
+            font-size: 13px;
+        }
+
+        .elementor-element.elementor-element-62abe2a2 .elementor-heading-title,
+        .elementor-element.elementor-element-0c344cc .elementor-heading-title {
+            margin: 20px auto;
+            font-size: 25px;
+        }
+
+        .elementor-element.elementor-element-11c3c22a {
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .elementor-element.elementor-element-4a94d7c {
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .elementor-column-wrap {
+            padding: 15px;
+        }
+
+        .elementor-image img {
+            display: block;
+            margin: 77px auto;
+        }
+    }
+
+
+    .elementor-image {
+        position: relative;
+    }
+
+        .elementor-image::after {
+            content: attr(data-text);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .elementor-image:hover::after {
+            opacity: 1;
+        }
+
+</style>
+
+
+
+
+<section class="breadcrumb-section parallax-img pt-0 bg-size blur-up lazyloaded" style="background-image: url(/Content/assets/Custom/Tour/dest1.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block; height: 155px;">
+    <img src="/Content/assets/Custom/Tour/dest1.jpg" class="bg-img img-fluid blur-up lazyloaded" alt="" style="display: none;">
+    <div class="breadcrumb-content overlay-black">
+        <div style="z-index:10000;">
+            <h2 style="color:white;">Get Your Desired Destination!</h2>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 20px; background-color: whitesmoke; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); border-radius: 8px;">
+
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-7b94b4a2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="7b94b4a2" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-row">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1d5cc8ee" data-id="1d5cc8ee" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap" style="margin:30px auto">
+                            <div class="elementor-element elementor-element-ed28d14 elementor-widget elementor-widget-heading" data-id="ed28d14" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default" style=" text-align: center;">why tour with us?</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-4239426 elementor-widget elementor-widget-heading" data-id="4239426" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <p class="elementor-heading-title elementor-size-default" style=" text-align: center;">Son agreed others exeter period myself few yet nature. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-4f445dc0 elementor-section-content-middle elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="4f445dc0" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+        <div class="elementor-container elementor-column-gap-no">
+            <div class="elementor-row">
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2f1a851f" data-id="2f1a851f" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-61906d15 elementor-widget elementor-widget-image" data-id="61906d15" data-element_type="widget" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+
+                                    <div class="elementor-image" data-text=" Taj Mahal">
+                                        <img decoding="async" width="2000" height="1333" src="~/Content/assets/img/Tour/Taj Mahal.jpg" class="attachment-full size-full wp-image-2305" alt="" loading="lazy" srcset="~/Content/assets/img/Tour/Taj Mahal.jpg 2000w, ~/Content/assets/img/Tour/Taj Mahal.jpg 300w, ~/Content/assets/img/Tour/Taj Mahal.jpg 1024w, ~/Content/assets/img/Tour/Taj Mahal.jpg 768w, ~/Content/assets/img/Tour/Taj Mahal.jpg 1536w, ~/Content/assets/img/Tour/Taj Mahal.jpg 720w, ~/Content/assets/img/Tour/Taj Mahal.jpg 600w" sizes="(max-width: 2000px) 100vw, 2000px" />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4a7cd14" data-id="4a7cd14" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-0c344cc elementor-invisible elementor-widget elementor-widget-heading" data-id="0c344cc" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <p class="elementor-heading-title elementor-size-default">
+                                        Taj Mahal
+                                    </p>
+                                </div>
+                            </div>
+                     
+                            <div class="elementor-element elementor-element-11c3c22a elementor-invisible elementor-widget elementor-widget-text-editor" data-id="11c3c22a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-text-editor elementor-clearfix">
+                                        Jaipur Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers. Jaipur Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-5516f732 elementor-section-content-middle elementor-reverse-mobile elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="5516f732" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+        <div class="elementor-container elementor-column-gap-no">
+            <div class="elementor-row" style="flex-wrap: wrap-reverse;">
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-501da7bb" data-id="501da7bb" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-62abe2a2 elementor-invisible elementor-widget elementor-widget-heading" data-id="62abe2a2" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <p class="elementor-heading-title elementor-size-default">India Gate</p>
+                                </div>
+                            </div>
+
+                            <div class="elementor-element elementor-element-4a94d7c elementor-invisible elementor-widget elementor-widget-text-editor" data-id="4a94d7c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-text-editor elementor-clearfix">
+                                        Jaipur Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers. Jaipur Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-21dc53b6" data-id="21dc53b6" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-1c30e12d elementor-widget elementor-widget-image" data-id="1c30e12d" data-element_type="widget" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+
+
+                                    <div class="elementor-image" data-text="India Gate">
+                                        <img decoding="async" width="2000" height="1333" src="~/Content/assets/img/Tour/India Gate.jpg" class="attachment-full size-full wp-image-2305" alt="" loading="lazy" srcset="~/Content/assets/img/Tour/India Gate.jpg 2000w, ~/Content/assets/img/Tour/India Gate.jpg 300w, ~/Content/assets/img/Tour/Taj Mahal.jpg 1024w, ~/Content/assets/img/Tour/India Gate.jpg 768w, ~/Content/assets/img/Tour/India Gate.jpg 1536w, ~/Content/assets/img/Tour/India Gatejpg 720w, ~/Content/assets/img/Tour/India Gate.jpg 600w" sizes="(max-width: 2000px) 100vw, 2000px" />
+                                    </div>
+
+                                    <div class="popup">
+                                        <strong> Lotus Temple</strong>
+                                        <span>Delhi, India</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-456b490 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="456b490" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-row">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0603004" data-id="0603004" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-57309e2 elementor-widget elementor-widget-spacer" data-id="57309e2" data-element_type="widget" data-widget_type="spacer.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-spacer">
+                                        <div class="elementor-spacer-inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-4f445dc0 elementor-section-content-middle elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="4f445dc0" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+        <div class="elementor-container elementor-column-gap-no">
+            <div class="elementor-row">
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2f1a851f" data-id="2f1a851f" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-61906d15 elementor-widget elementor-widget-image" data-id="61906d15" data-element_type="widget" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+
+                                    <div class="elementor-image" data-text="Lotus Temple">
+                                        <img decoding="async" width="2000" height="1333" src="/Content/assets/img/Tour/Lotus Temple.jpg" class="attachment-full size-full wp-image-2305" alt="" loading="lazy" srcset="/Content/assets/img/Tour/Taj Mahal.jpg 2000w, /Content/assets/img/Tour/Lotus Temple.jpg 300w, /Content/assets/img/Tour/Lotus Temple.jpg 1024w, /Content/assets/img/Tour/Taj Mahal.jpg 768w, /Content/assets/img/Tour/Lotus Temple.jpg 1536w, /Content/assets/img/Tour/Lotus Temple.jpg 720w, /Content/assets/img/Tour/Lotus Temple.jpg 600w" sizes="(max-width: 2000px) 100vw, 2000px">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4a7cd14" data-id="4a7cd14" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-0c344cc elementor-invisible elementor-widget elementor-widget-heading" data-id="0c344cc" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <p class="elementor-heading-title elementor-size-default">
+                                        Lotus Temple
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="elementor-element elementor-element-11c3c22a elementor-invisible elementor-widget elementor-widget-text-editor" data-id="11c3c22a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-text-editor elementor-clearfix">
+                                        Jaipur Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers. Jaipur Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-5516f732 elementor-section-content-middle elementor-reverse-mobile elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="5516f732" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+        <div class="elementor-container elementor-column-gap-no">
+            <div class="elementor-row" style="flex-wrap: wrap-reverse;">
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-501da7bb" data-id="501da7bb" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-62abe2a2 elementor-invisible elementor-widget elementor-widget-heading" data-id="62abe2a2" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <p class="elementor-heading-title elementor-size-default">Red Fort</p>
+                                </div>
+                            </div>
+
+                            <div class="elementor-element elementor-element-4a94d7c elementor-invisible elementor-widget elementor-widget-text-editor" data-id="4a94d7c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-text-editor elementor-clearfix">
+                                        Jaipur Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers. Jaipur Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-21dc53b6" data-id="21dc53b6" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-1c30e12d elementor-widget elementor-widget-image" data-id="1c30e12d" data-element_type="widget" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+
+                                    <div class="elementor-image" data-text="Red Fort">
+                                        <img decoding="async" width="2000" height="1333" src="/Content/assets/img/Tour/Red Fort.jpg" class="attachment-full size-full wp-image-2305" alt="" loading="lazy" srcset="/Content/assets/img/Tour/Red Fort.jpg.jpg 2000w, /Content/assets/img/Tour/Red Fort.jpg.jpg 300w, /Content/assets/img/Tour/Red Fort.jpg.jpg 1024w, /Content/assets/img/Tour/Red Fort.jpg.jpg 768w, /Content/assets/img/Tour/Red Fort.jpg.jpg 1536w, /Content/assets/img/Tour/Red Fort.jpg.jpg 720w, /Content/assets/img/Tour/Red Fort.jpg.jpg 600w" sizes="(max-width: 2000px) 100vw, 2000px">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-456b490 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="456b490" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-row">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0603004" data-id="0603004" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-57309e2 elementor-widget elementor-widget-spacer" data-id="57309e2" data-element_type="widget" data-widget_type="spacer.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-spacer">
+                                        <div class="elementor-spacer-inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.popup-image').click(function() {
+    var imageSrc = $(this).attr('src');
+    var popupHtml = '<div class="popup"><img src="' + imageSrc + '" /><span class="close">X</span></div>';
+    $('body').append(popupHtml);
+    $('.popup .close').click(function() {
+      $('.popup').remove();
+    });
+  });
+});
+</script>
