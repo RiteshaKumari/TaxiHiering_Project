@@ -107,7 +107,8 @@
                             <div class="col-xl-3 col-lg-4 col-sm-6 grid-item popular">
                                 <div class="special-box p-0">
                                     <div class="special-imgg">
-                                        <a href="@Url.Action("TourDetails", "Home", new { id = item.ID, imageUrl = HttpUtility.UrlEncode(item.PackageImage) })" class="bg-size blur-up lazyloaded">
+                                        @*<a href="@Url.Action("TourDetails", "Home", new { id = item.ID, imageUrl = HttpUtility.UrlEncode(item.PackageImage) })" class="bg-size blur-up lazyloaded">*@
+                                        <a href="#" class="bg-size blur-up lazyloaded">
                                             <img src="@item.PackageImage" class="img-fluid blur-up lazyload bg-img" alt="Package Image">
                                         </a>
                                     </div>
@@ -118,12 +119,14 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <a href="@Url.Action("TourDetails", "Home", new { id = item.ID, imageUrl = HttpUtility.UrlEncode(item.PackageImage) })">
-                                                <h5 class="hov">@item.PackageTitle</h5>
+                                          @*  <a href="@Url.Action("TourDetails", "Home", new { id = item.ID, imageUrl = HttpUtility.UrlEncode(item.PackageImage) })">*@
+                                            <a href="#">  
+                                            <h5 class="hov">@item.PackageTitle</h5>
                                             </a>
                                         </div>
                                         <p><i class="fa-regular fa-location-dot" style="color:red;"></i>&nbsp;<span>@item.Location</span></p>
-                                        <a href="@Url.Action("TourDetails", "Home", new { id = item.ID, imageUrl = HttpUtility.UrlEncode(item.PackageImage) })" class="btn as-btn btn-sm d-block">View Details&nbsp;<i class="fas fa-arrow-up-right"></i></a>
+                                      @*  <a href="@Url.Action("TourDetails", "Home", new { id = item.ID, imageUrl = HttpUtility.UrlEncode(item.PackageImage) })" class="btn as-btn btn-sm d-block">View Details&nbsp;<i class="fas fa-arrow-up-right"></i></a>*@
+                                        <a href="#" class="btn as-btn btn-sm d-block">View Details&nbsp;<i class="fas fa-arrow-up-right"></i></a>
                                     </div>
                                 </div>
                             </div>
