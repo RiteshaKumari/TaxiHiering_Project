@@ -372,10 +372,9 @@
     <header><h2 style="color:red">Gallery</h2></header>
     <div class="container">
         <div class="row gallery gallery-1">
-
-            @foreach (var image in Model)
+           @foreach (var image in Model)
             {
-                <img data-img="@image.popupimg" src="@image.srcimg" alt="@image.alt" />
+                <img data-img="@image.popupimg" src="@image.srcimg" alt="@image.alt"/>
             }
         </div>
     </div>

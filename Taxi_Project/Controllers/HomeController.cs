@@ -16,8 +16,8 @@ namespace Taxi_Project.Controllers
 
 		public ActionResult Index()
 		{
-			var list = new List<string>() { "Select Vehicle Class", "Normal Car", "Business Class", "VIP Service" };
-			ViewBag.list = list;
+			//var list = new List<string>() { "Select Vehicle Class", "Normal Car", "Business Class", "VIP Service" };
+			//ViewBag.list = list;
 			return View();
 		}
 
@@ -34,15 +34,21 @@ namespace Taxi_Project.Controllers
 					if (rowsAffected > 0)
 					{
 						ModelState.Clear();
-						TempData["check"] = "True";
+                        TempData["message"] = "Submitted !";
+                        TempData["check"] = "True";
 						return View();
 					}
 
 					else
 					{
-						TempData["message"] = "Something went wrong!";
+						TempData["message"] = "Submitted!";
 					}
 				}
+				else
+				{
+					TempData["message"] = "Enter correct syntax";
+
+                }
 			}
 			catch (Exception ex)
 			{

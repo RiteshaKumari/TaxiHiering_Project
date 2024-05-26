@@ -1,5 +1,6 @@
 ﻿@using Taxi_Project.Models
 @model tbl_BookingVehicle
+
 @{
     ViewBag.Title = "Home Page";
 }
@@ -817,35 +818,41 @@
                 </div>
             </div>
             <div class="col-lg-6 ps-3 ps-xl-5">
+                <strong style="color:red;">@TempData["message"]</strong>
                 @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "bookingForm" }))
                 {
                     <div class="row">
                         <div class="form-group col-sm-6">
-                            @Html.TextBoxFor(model => model.bookingPhone, new { @class = "form-control", @PlaceHolder = "Phone Number", @id = "phone", @type = "text" })
+                            @Html.TextBoxFor(model => model.bookingPhone, new { @class = "form-control", @PlaceHolder = "Phone Number", @id = "phone", @type = "number" })
+                            @Html.ValidationMessageFor(model => model.bookingPhone, null, new { @class = "text-danger" })
                             <span class="text-danger" id="phoneError"></span>
                         </div>
                         <div class="form-group col-sm-6">
                             @Html.TextBoxFor(model => model.bookingLocation, new { @class = "form-control", @PlaceHolder = "Enter Location", @id = "location", @type = "text" })
+                            @Html.ValidationMessageFor(model => model.bookingLocation, null, new { @class = "text-danger" })
                             <span class="text-danger" id="locationError"></span>
                         </div>
                         <div class="form-group col-sm-6">
-                            @Html.TextBoxFor(model => model.bookingDate, new { @class = "date-pick form-control", @PlaceHolder = "Select Date", @id = "date-pick", @type = "text" })
+                            @Html.TextBoxFor(model => model.bookingDate, new { @class = "date-pick form-control", @PlaceHolder = "Select Date", @id = "date-pick", @type = "Date" })
+                            @Html.ValidationMessageFor(model => model.bookingDate, null, new { @class = "text-danger" })
                             <span class="text-danger" id="dateError"></span>
                         </div>
                         <div class="form-group col-sm-6">
                             @Html.TextBoxFor(model => model.bookingTime, new { @class = "time-pick form-control", @PlaceHolder = "Select Time", @id = "time-pick", @type = "text" })
+                            @Html.ValidationMessageFor(model => model.bookingTime, null, new { @class = "text-danger" })
                             <span class="text-danger" id="timeError"></span>
                         </div>
                         <div class="form-group col-12">
-                            @Html.DropDownListFor(e => e.bookingVehicalClass, new List<SelectListItem>{
+                            @Html.DropDownListFor(model => model.bookingVehicalClass, new List<SelectListItem>{
                                  new SelectListItem { Text="Normal Car",Value="Normal Car"},
                                  new SelectListItem { Text="Business Class",Value="Business Class"},
                                  new SelectListItem { Text="VIP Service",Value="VIP Service"}
                              }, "--Select Vehicle Class--", new { @class = "form-control" })
-                            <span class="text-danger" id="vehicleClassError"></span>
+                            @Html.ValidationMessageFor(model => model.bookingVehicalClass, null, new { @class = "text-danger" })
                         </div>
                         <div class="form-group col-12">
                             @Html.TextBoxFor(model => model.noofpassenger, new { @class = "form-control", @PlaceHolder = "No Of Passengers", @id = "passenger", @type = "text" })
+                            @Html.ValidationMessageFor(model => model.noofpassenger, null, new { @class = "text-danger" })
                             <span class="text-danger" id="passengerError"></span>
                         </div>
                         <div class="form-btn col-12"><button class="as-btn" id="submit" name="submit" type="submit">Book Your Vehicle</button></div>
